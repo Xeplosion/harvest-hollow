@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Content\Icon.ico</ApplicationIcon>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Xeplosion/Shoreside</PackageProjectUrl>
+    <Copyright>Xeplosion Games Corp. 2024</Copyright>
+    <BaseOutputPath>D:\Projects\Shoreside\Shoreside\Build</BaseOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Content\GameData\World\**" />
+    <EmbeddedResource Remove="Content\GameData\World\**" />
+    <None Remove="Content\GameData\World\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LDtkMonogame" Version="1.2.0" />
+    <PackageReference Include="LDtkMonogame.ContentPipeline" Version="1.2.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build\" />
+    <Folder Include="Content\GameData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
