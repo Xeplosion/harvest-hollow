@@ -3,8 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Threading;
-
 using HarvestHollow.Content;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 
 namespace HarvestHollow
 {
@@ -12,7 +13,6 @@ namespace HarvestHollow
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Thread _mainThread;
 
         public HarvestHollow()
         {
@@ -27,9 +27,6 @@ namespace HarvestHollow
             IsFixedTimeStep = false;
             _graphics.SynchronizeWithVerticalRetrace = false;
             IsMouseVisible = false;
-
-            _mainThread = Thread.CurrentThread;
-            _mainThread.Name = "game";
         }
 
         protected override void Initialize()

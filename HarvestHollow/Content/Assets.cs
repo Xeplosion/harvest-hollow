@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using Microsoft.Xna.Framework.Content;
-using LDtk;
 using Microsoft.Xna.Framework.Media;
 using System.Diagnostics;
 
@@ -13,16 +12,25 @@ namespace HarvestHollow.Content
     internal class Assets : AssetLoader
     {
         // Asset variables containing references to all loaded assets.
-        internal static LDtkFile Levels;
-        internal static Dictionary<string, SpriteFont> Fonts;
-        internal static Dictionary<string, SoundEffect> SoundEffects;
-        internal static Dictionary<string, Song> Music;
-        internal static Dictionary<string, Texture2D> Characters;
-        internal static Dictionary<string, Texture2D> CharacterEffects;
-        internal static Dictionary<string, Texture2D> NPCs;
-        internal static Dictionary<string, Texture2D> PaletteSwap;
-        internal static Dictionary<string, Texture2D> SpriteSheets;
-        internal static Dictionary<string, Texture2D> TileSheets;
+        private static Dictionary<string, SpriteFont> _fonts;
+        private static Dictionary<string, SoundEffect> _soundEffects;
+        private static Dictionary<string, Song> _music;
+        private static Dictionary<string, Texture2D> _characters;
+        private static Dictionary<string, Texture2D> _characterEffects;
+        private static Dictionary<string, Texture2D> _NPCs;
+        private static Dictionary<string, Texture2D> _paletteSwap;
+        private static Dictionary<string, Texture2D> _spriteSheets;
+        private static Dictionary<string, Texture2D> _tileSheets;
+
+        internal static Dictionary<string, SpriteFont> Fonts { get { return _fonts; } }
+        internal static Dictionary<string, SoundEffect> SoundEffects { get { return _soundEffects; } }
+        internal static Dictionary<string, Song> Music { get { return _music; } }
+        internal static Dictionary<string, Texture2D> Characters { get { return _characters; } }
+        internal static Dictionary<string, Texture2D> CharacterEffects { get { return _characterEffects; } }
+        internal static Dictionary<string, Texture2D> NPCs { get { return _NPCs; } }
+        internal static Dictionary<string, Texture2D> PaletteSwap { get { return _paletteSwap; } }
+        internal static Dictionary<string, Texture2D> SpriteSheets { get { return _spriteSheets; } }
+        internal static Dictionary<string, Texture2D> TileSheets { get { return _tileSheets; } }
 
         // Constructor required for superclass AssetLoader function.
         internal Assets(ContentManager contentManager) : base(contentManager) { LoadAllAssets(); }
@@ -34,36 +42,36 @@ namespace HarvestHollow.Content
             switch (section)
             {
                 case AssetSection.SFX:
-                    SoundEffects = GetSoundEffects(section);
+                    _soundEffects = GetSoundEffects(section);
                     break;
                 case AssetSection.OST:
-                    Music = GetSongs(section);
+                    _music = GetSongs(section);
                     break;
                 case AssetSection.CharacterSheets:
-                    Characters = GetTextures(section);
+                    _characters = GetTextures(section);
                     break;
                 case AssetSection.CharacterEffects:
-                    CharacterEffects = GetTextures(section);
+                    _characterEffects = GetTextures(section);
                     break;
                 case AssetSection.NPC:
-                    NPCs = GetTextures(section);
+                    _NPCs = GetTextures(section);
                     break;
                 case AssetSection.PaletteSwap:
-                    PaletteSwap = GetTextures(section);
+                    _paletteSwap = GetTextures(section);
                     break;
                 case AssetSection.SpriteSheets:
-                    SpriteSheets = GetTextures(section);
+                    _spriteSheets = GetTextures(section);
                     break;
                 case AssetSection.TileSheets:
-                    TileSheets = GetTextures(section);
+                    _tileSheets = GetTextures(section);
                     break;
 
                 // Non Xna.Framework asset types.
                 case AssetSection.LDtk:
-                    //Levels = GetLevels();
+                    // Levels = GetLevels();
                     break;
                 case AssetSection.Fonts:
-                    Fonts = GetFonts();
+                    _fonts = GetFonts();
                     break;
                 default:
                     Debug.WriteLine("ERROR: Invalid AssetSection");
@@ -80,16 +88,17 @@ namespace HarvestHollow.Content
         }
 
         // Loads all game assets in separate threads.
-        internal static Thread[] loaderThreads = new Thread[Environment.ProcessorCount - 1];
+        private static Thread[] _loaderThreads = new Thread[Environment.ProcessorCount - 1];
+        internal static Thread[] LoaderThreads { get { return _loaderThreads; } }
         private static Dictionary<AssetSection, int> _sortedThreads;
         internal static void LoadAllAssets()
         {
             Debug.WriteLine("\nLOADING ALL ASSETS:");
-            _sortedThreads = GetThreadDistribution(loaderThreads.Length);
-            for (int thread = 0; thread < loaderThreads.Length; thread++) {
-                loaderThreads[thread] = new Thread(LoadThreadAssets);
-                loaderThreads[thread].Name = $"AssetLoader{thread}";
-                loaderThreads[thread].Start(thread);
+            _sortedThreads = GetThreadDistribution(_loaderThreads.Length);
+            for (int thread = 0; thread < _loaderThreads.Length; thread++) {
+                _loaderThreads[thread] = new Thread(LoadThreadAssets);
+                _loaderThreads[thread].Name = $"AssetLoader{thread}";
+                _loaderThreads[thread].Start(thread);
             }
         }
         internal static void ReloadAllAssets() { LoadAllAssets(); }
