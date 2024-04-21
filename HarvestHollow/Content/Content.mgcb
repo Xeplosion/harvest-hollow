@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:C:/Users/Xeplosion/.nuget/packages/monogame.extended.content.pipeline/3.8.0/tools/MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -40,6 +41,12 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:Fonts/ManaSeedTitleMono.spritefont
+
+#begin HarvestHollow.json
+/importer:JsonContentImporter
+/processor:JsonContentProcessor
+/processorParam:ContentType=Setting file.
+/build:HarvestHollow.json
 
 #begin Images/SpriteSheets/AlchemyGear/AlchemyGear.png
 /importer:TextureImporter
@@ -7181,7 +7188,7 @@
 /processorParam:TextureFormat=Color
 /build:Images/SpriteSheets/SmithingGear/Icons/Winter.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnTallGrassAffect32x32.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnTallGrassAffect32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7191,9 +7198,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnTallGrassAffect32x32.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnTallGrassAffect32x32.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnWaterfallB16x16.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnWaterfallB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7203,9 +7210,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnWaterfallB16x16.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnWaterfallB16x16.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnWaterSparklesB16x16.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnWaterSparklesB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7215,9 +7222,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnAnimations/AutumnWaterSparklesB16x16.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnAnimations/AutumnWaterSparklesB16x16.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn16x16.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7227,9 +7234,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn16x16.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn16x16.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn16x32.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn16x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7239,9 +7246,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn16x32.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn16x32.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn32x32.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7251,9 +7258,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn32x32.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn32x32.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn48x32.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7263,9 +7270,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/Autumn48x32.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/Autumn48x32.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/AutumnWang.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/AutumnWang.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7275,9 +7282,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/AutumnWang.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/AutumnWang.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/BareAutumnForest.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/BareAutumnForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7287,9 +7294,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/BareAutumnForest.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/BareAutumnForest.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/BareAutumnTrees80x112.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/BareAutumnTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7299,9 +7306,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/BareAutumnTrees80x112.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/BareAutumnTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/CleanAutumnForest.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/CleanAutumnForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7311,9 +7318,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/CleanAutumnForest.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/CleanAutumnForest.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/CleanAutumnTrees80x112.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/CleanAutumnTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7323,9 +7330,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/CleanAutumnTrees80x112.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/CleanAutumnTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/LeavesAutumnForest.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/LeavesAutumnForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7335,9 +7342,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/LeavesAutumnForest.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/LeavesAutumnForest.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/LeavesAutumnTrees80x112.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/LeavesAutumnTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7347,9 +7354,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnSheets/LeavesAutumnTrees80x112.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnSheets/LeavesAutumnTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnBareCanopyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnBareCanopyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7359,9 +7366,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnBareCanopyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnBareCanopyTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnBareTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnBareTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7371,9 +7378,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnBareTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnBareTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnCleanTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnCleanTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7383,9 +7390,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnCleanTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnCleanTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnLeavesTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnLeavesTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7395,9 +7402,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnLeavesTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnLeavesTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7407,9 +7414,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/AutumnForest/AutumnTreeWall/AutumnTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/AutumnForest/AutumnTreeWall/AutumnTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv116x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv116x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7419,9 +7426,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv116x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv116x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv216x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv216x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7431,9 +7438,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv216x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv216x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv316x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv316x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7443,9 +7450,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv316x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv316x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv416x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv416x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7455,9 +7462,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterfallBv416x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterfallBv416x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv116x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv116x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7467,9 +7474,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv116x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv116x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv216x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv216x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7479,9 +7486,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv216x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv216x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv316x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv316x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7491,9 +7498,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv316x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv316x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv416x16.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv416x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7503,9 +7510,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveAnimations/CaveWaterSparklesBv416x16.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveAnimations/CaveWaterSparklesBv416x16.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v1.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7515,9 +7522,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v1.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v1.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v2.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7527,9 +7534,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v2.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v2.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v3.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v3.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7539,9 +7546,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v3.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v3.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v4.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v4.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7551,9 +7558,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x16v4.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x16v4.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v1.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7563,9 +7570,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v1.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v1.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v2.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7575,9 +7582,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v2.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v2.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v3.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v3.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7587,9 +7594,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v3.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v3.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v4.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v4.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7599,9 +7606,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave16x32v4.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave16x32v4.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v1.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7611,9 +7618,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v1.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v1.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v2.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7623,9 +7630,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v2.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v2.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v3.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v3.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7635,9 +7642,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v3.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v3.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v4.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v4.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7647,9 +7654,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/Cave32x32v4.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/Cave32x32v4.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV1.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV1.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7659,9 +7666,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV1.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV1.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV2.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7671,9 +7678,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV2.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV2.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV3.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV3.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7683,9 +7690,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV3.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV3.png
 
-#begin Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV4.png
+#begin Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV4.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7695,9 +7702,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/MuddyCave/CaveSheets/CaveV4.png
+/build:Images/TileSheets/Environmnet/MuddyCave/CaveSheets/CaveV4.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringTallGrassAffect32x32.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringTallGrassAffect32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7707,9 +7714,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringTallGrassAffect32x32.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringTallGrassAffect32x32.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringWaterfallB16x16.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringWaterfallB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7719,9 +7726,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringWaterfallB16x16.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringWaterfallB16x16.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringWaterSparklesB16x16.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringWaterSparklesB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7731,9 +7738,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringAnimations/SpringWaterSparklesB16x16.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringAnimations/SpringWaterSparklesB16x16.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring16x16.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7743,9 +7750,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring16x16.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring16x16.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring16x32.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring16x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7755,9 +7762,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring16x32.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring16x32.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring32x32.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7767,9 +7774,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring32x32.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring32x32.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring48x32.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7779,9 +7786,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/Spring48x32.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/Spring48x32.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringForest.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7791,9 +7798,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringForest.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringForest.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringTrees80x112.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7803,9 +7810,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringTrees80x112.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringWang.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringWang.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7815,9 +7822,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringSheets/SpringWang.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringSheets/SpringWang.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringTreeWall/SpringCanopyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringTreeWall/SpringCanopyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7827,9 +7834,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringTreeWall/SpringCanopyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringTreeWall/SpringCanopyTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/SpringForest/SpringTreeWall/SpringTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/SpringForest/SpringTreeWall/SpringTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7839,9 +7846,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SpringForest/SpringTreeWall/SpringTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/SpringForest/SpringTreeWall/SpringTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerTallgrassAffect32x32.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerTallgrassAffect32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7851,9 +7858,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerTallgrassAffect32x32.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerTallgrassAffect32x32.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerWaterfallB16x16.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerWaterfallB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7863,9 +7870,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerWaterfallB16x16.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerWaterfallB16x16.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerWaterSparklesB16x16.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerWaterSparklesB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7875,9 +7882,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerAnimations/SummerWaterSparklesB16x16.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerAnimations/SummerWaterSparklesB16x16.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer16x16.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7887,9 +7894,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer16x16.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer16x16.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer16x32.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer16x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7899,9 +7906,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer16x32.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer16x32.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer32x32.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7911,9 +7918,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer32x32.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer32x32.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer48x32.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7923,9 +7930,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/Summer48x32.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/Summer48x32.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerForest.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7935,9 +7942,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerForest.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerForest.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerTrees80x112.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7947,9 +7954,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerTrees80x112.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerWang.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerWang.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7959,9 +7966,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerSheets/SummerWang.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerSheets/SummerWang.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerTreeWall/SummerCanopyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerTreeWall/SummerCanopyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7971,9 +7978,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerTreeWall/SummerCanopyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerTreeWall/SummerCanopyTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/SummerForest/SummerTreeWall/SummerTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/SummerForest/SummerTreeWall/SummerTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7983,9 +7990,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/SummerForest/SummerTreeWall/SummerTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/SummerForest/SummerTreeWall/SummerTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/CloudCover32x32.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/CloudCover32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -7995,9 +8002,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/CloudCover32x32.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/CloudCover32x32.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/HeavyRainAnimation32x32.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/HeavyRainAnimation32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8007,9 +8014,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/HeavyRainAnimation32x32.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/HeavyRainAnimation32x32.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/LightningFull32x128.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/LightningFull32x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8019,9 +8026,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/LightningFull32x128.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/LightningFull32x128.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/LightningImpact32x48.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/LightningImpact32x48.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8031,9 +8038,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/LightningImpact32x48.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/LightningImpact32x48.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/LightningRepeatable32x80.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/LightningRepeatable32x80.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8043,9 +8050,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/LightningRepeatable32x80.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/LightningRepeatable32x80.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/RainImpact16x16.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/RainImpact16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8055,9 +8062,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/RainImpact16x16.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/RainImpact16x16.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/RainLightAnimation32x128.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/RainLightAnimation32x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8067,9 +8074,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/RainLightAnimation32x128.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/RainLightAnimation32x128.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/SnowCover16x16.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/SnowCover16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8079,9 +8086,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/SnowCover16x16.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/SnowCover16x16.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/SnowHeavyAnimation32x128.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/SnowHeavyAnimation32x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8091,9 +8098,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/SnowHeavyAnimation32x128.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/SnowHeavyAnimation32x128.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/SnowImpactAnimation16x16.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/SnowImpactAnimation16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8103,9 +8110,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/SnowImpactAnimation16x16.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/SnowImpactAnimation16x16.png
 
-#begin Images/TileSheets/Enviorment/WeatherEffects/SnowLightAnimation32x128.png
+#begin Images/TileSheets/Environmnet/WeatherEffects/SnowLightAnimation32x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8115,9 +8122,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WeatherEffects/SnowLightAnimation32x128.png
+/build:Images/TileSheets/Environmnet/WeatherEffects/SnowLightAnimation32x128.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterTallGrassAffect32x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterTallGrassAffect32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8127,9 +8134,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterTallGrassAffect32x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterTallGrassAffect32x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterWaterfallB16x16.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterWaterfallB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8139,9 +8146,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterWaterfallB16x16.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterWaterfallB16x16.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterWaterSparklesB16x16.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterWaterSparklesB16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8151,9 +8158,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterAnimations/WinterWaterSparklesB16x16.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterAnimations/WinterWaterSparklesB16x16.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter16x16.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8163,9 +8170,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter16x16.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter16x16.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter16x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter16x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8175,9 +8182,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter16x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter16x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter32x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8187,9 +8194,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter32x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter32x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter48x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8199,9 +8206,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinter48x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinter48x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinterForest.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinterForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8211,9 +8218,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinterForest.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinterForest.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinterTrees80x112.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinterTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8223,9 +8230,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/CleanWinterTrees80x112.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/CleanWinterTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinter32x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinter32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8235,9 +8242,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinter32x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinter32x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinter48x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinter48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8247,9 +8254,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinter48x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinter48x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinterForest.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinterForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8259,9 +8266,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinterForest.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinterForest.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinterTrees80x112.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinterTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8271,9 +8278,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/LeavesWinterTrees80x112.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/LeavesWinterTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter16x16.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8283,9 +8290,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter16x16.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter16x16.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter16x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter16x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8295,9 +8302,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter16x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter16x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter32x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8307,9 +8314,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter32x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter32x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter48x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8319,9 +8326,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinter48x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinter48x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterBase32x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterBase32x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8331,9 +8338,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterBase32x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterBase32x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterBase48x32.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterBase48x32.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8343,9 +8350,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterBase48x32.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterBase48x32.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterForest.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterForest.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8355,9 +8362,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterForest.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterForest.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterTrees80x112.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterTrees80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8367,9 +8374,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterTrees80x112.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterTrees80x112.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterTreesBase80x112.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterTreesBase80x112.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8379,9 +8386,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterTreesBase80x112.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterTreesBase80x112.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterWang.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterWang.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8391,9 +8398,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/SnowyWinterWang.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/SnowyWinterWang.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterSheets/WinterWang.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterSheets/WinterWang.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8403,9 +8410,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterSheets/WinterWang.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterSheets/WinterWang.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterCleanCanopyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterCleanCanopyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8415,9 +8422,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterCleanCanopyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterCleanCanopyTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterCleanTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterCleanTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8427,9 +8434,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterCleanTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterCleanTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterLeavesTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterLeavesTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8439,9 +8446,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterLeavesTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterLeavesTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterSnowyCanopyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterSnowyCanopyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8451,9 +8458,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterSnowyCanopyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterSnowyCanopyTreeWall128x128.png
 
-#begin Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterSnowyTreeWall128x128.png
+#begin Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterSnowyTreeWall128x128.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -8463,7 +8470,7 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Images/TileSheets/Enviorment/WinterForest/WinterTreeWall/WinterSnowyTreeWall128x128.png
+/build:Images/TileSheets/Environmnet/WinterForest/WinterTreeWall/WinterSnowyTreeWall128x128.png
 
 #begin Images/TileSheets/Exterior/BridgesAndMore/BridgesV1.png
 /importer:TextureImporter

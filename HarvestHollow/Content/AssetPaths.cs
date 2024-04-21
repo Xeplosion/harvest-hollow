@@ -1077,8 +1077,8 @@ namespace HarvestHollow.Content
                 {
                     AssetSection.TileSheets, new List<(string, string)>
                     { 
-                        // ENVIORMENT:
-
+                        // ENVIRONMENT:
+                        // TODO: re-add environment tiles.
 
                         // INTERIOR:
                         // Dungeon.

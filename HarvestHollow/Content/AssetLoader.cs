@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.IO;
 using System.Diagnostics;
-using LDtk;
 
 namespace HarvestHollow.Content
 {
@@ -19,6 +18,7 @@ namespace HarvestHollow.Content
             // Initialize content manager for loading assets.
             _contentManager = contentManager;
             InitializeAssetCounts();
+            SoundEffect.Initialize(); // Needed to make multi-threaded asset loading function.
         }
 
         // Variables to keep track of asset loading progress.
@@ -141,29 +141,8 @@ namespace HarvestHollow.Content
             // Return the Dictionary of assets.
             return assets;
         }
-        protected static LDtkFile GetLevels()
-        {
-            string levelPath = "./World/Shoreside.ldtk";
-            try { return LDtkFile.FromFile(levelPath); }
-            catch (LDtkException ldtk)
-            {
-                // LDtk Nugget package error
-                Debug.WriteLine($"LDtk exception {ldtk.Message}");
-            }
-            catch(System.IO.DirectoryNotFoundException)
-            {
-                // Invalid directory.
-                Debug.WriteLine($"'{levelPath}' does not exist.");
-            }
-            catch (FileNotFoundException fnfe)
-            {
-                // File not found
-                Debug.WriteLine($"Level file not found at path '{levelPath}': {fnfe.Message}");
-            }
-
-            // Level unsuccessfully loaded:
-            return LDtkFile.FromFile(levelPath);
-        }
+        
+        // TODO: add level loading.
         protected static Dictionary<string, SpriteFont> GetFonts()
         {
             Dictionary<string, SpriteFont> assets = new Dictionary<string, SpriteFont>();
@@ -269,9 +248,12 @@ namespace HarvestHollow.Content
             }
 
             // DEBUG MESSAGES:
-            for (int section = 0; section < sortedAssetSection.Length; section++)
+            if (ProjectSettings.DEVELOPER)
             {
-                Debug.WriteLine($"Successfully sorted core {section} containing {threadSizes[section]} assets;");
+                for (int section = 0; section < sortedAssetSection.Length; section++)
+                {
+                    Debug.WriteLine($"Successfully sorted core {section} containing {threadSizes[section]} assets;");
+                }
             }
             
             // Then we return the (hopefully) evenly distributed asset sections :)
@@ -279,15 +261,18 @@ namespace HarvestHollow.Content
         }
 
         // Updates the loading progress bar.
-        protected static float ProgressBar;
-        protected static string ProgressBarText;
+        private static float _progressBar;
+        private static string _progressBarText;
+        protected static float ProgressBar { get { return _progressBar; } }
+        protected static string ProgressBarText { get { return _progressBarText; } }
         private static void NotifyProgress(AssetSection section)
         {
             // Update main progress bar
-            ProgressBar = _progress / _totalAssets;
-            ProgressBarText = $"Loaded {_progress} / {_totalAssets} total assets.";
+            _progressBar = _progress / _totalAssets;
+            _progressBarText = $"Loaded {_progress} / {_totalAssets} total assets.";
 
             // DEBUG MESSAGES:
+            if (!ProjectSettings.DEVELOPER) { return;  }
             Debug.WriteLine(
                 $"Loaded asset '{AssetPaths[section][_currentSectionProgress[section]]}'; " +
                 $"Current section progress {_currentSectionProgress[section]} / {_totalAssetsPerSection[section]};"
