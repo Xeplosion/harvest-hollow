@@ -12,7 +12,13 @@
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/Xeplosion/Shoreside</PackageProjectUrl>
     <Copyright>Xeplosion Games Corp. 2024</Copyright>
-    <BaseOutputPath>D:\Projects\Shoreside\Shoreside\Build</BaseOutputPath>
+    <BaseOutputPath>D:\Projects\HarvestHollow\HarvestHollow\Build</BaseOutputPath>
+    <SignAssembly>False</SignAssembly>
+    <Authors>Xeplosion</Authors>
+    <Company>Xeplosion Games Cooperation</Company>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <NeutralLanguage>en-001</NeutralLanguage>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Content\GameData\World\**" />
@@ -23,6 +29,9 @@
     <Content Include="Content\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="ILGPU" Version="1.5.1" />
+    <PackageReference Include="MonoGame.Extended" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="3.8.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
@@ -34,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

@@ -6,6 +6,7 @@ using System.Threading;
 using HarvestHollow.Content;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
+using System.Security.Cryptography;
 
 namespace HarvestHollow
 {

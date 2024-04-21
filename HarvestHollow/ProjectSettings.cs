@@ -1,13 +1,16 @@
-﻿using System.IO;
-using System.Text.Json;
+﻿using Newtonsoft.Json;
+using Microsoft.Xna.Framework;
+using MonoGame.Extended.Serialization;
 
-namespace HarvestHollow
-{
+//namespace HarvestHollow
+
+// TODO: read JSON file from Content.mgcb
+/*
     public static class ProjectSettings
     {
         // Access project data.
-        private static readonly string _jsonText = File.ReadAllText(@"./HarvestHollow.json");
-        private static readonly JsonStructure _jsonData = JsonSerializer.Deserialize<JsonStructure>(_jsonText);
+        private static readonly string _jsonText = File.ReadAllText(, "./HarvestHollow.json")
+        private static readonly JsonStructure _jsonData = JsonConvert.DeserializeObject<JsonStructure>(_jsonText);
 
         public static readonly string NAME;
         public static readonly string VERSION;
@@ -36,7 +39,7 @@ namespace HarvestHollow
             LICENSE = _jsonData.License;
         }
     }
-    internal class JsonStructure
+    internal struct JsonStructure
     {
         internal string Name { get; set; }
         internal string Version { get; set; }
@@ -45,7 +48,7 @@ namespace HarvestHollow
         internal string Author { get; set; }
         internal string License { get; set; }
     }
-    internal class SettingStructure
+    internal struct SettingStructure
     {
         internal bool Developer { get; set; }
         internal bool DetailedOutput { get; set; }
@@ -53,3 +56,5 @@ namespace HarvestHollow
         internal bool CustomLaunchCommands { get; set; }
     }
 }
+
+*/
