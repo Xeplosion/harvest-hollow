@@ -28,7 +28,7 @@ namespace HarvestHollow.Content
         private static float _progress;
         protected static void InitializeAssetCounts()
         {
-            // Computes the total number of assets.
+            // Computes the total number of assets. 
             _totalAssetsPerSection = new Dictionary<AssetSection, int>();
             _currentSectionProgress = new Dictionary<AssetSection, int>();
             foreach (AssetSection section in AssetPaths.Keys)
