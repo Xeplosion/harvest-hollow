@@ -1,6 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using System.Threading;
+using System.Security.Cryptography;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
+using Zambrin.Content;
 
 namespace Zambrin
 {
@@ -11,23 +17,35 @@ namespace Zambrin
 
         public Zambrin()
         {
+            // Graphical settings.
             _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
-            IsMouseVisible = true;
+            _graphics.IsFullScreen = true;
+            _graphics.PreferMultiSampling = false;
+            _graphics.HardwareModeSwitch = false;
+            _graphics.ApplyChanges();
+
+            // Optional: Disable the fixed time step if not needed.
+            IsFixedTimeStep = false;
+            _graphics.SynchronizeWithVerticalRetrace = false;
+            IsMouseVisible = false;
         }
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
+            // Loads all non-graphical content.
+            Console.WriteLine("Running initialization logic...");
             base.Initialize();
         }
-
+        internal Assets GameAssets;
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            // Loads all graphical game content.
+            Console.WriteLine("Loading game content...");
+
+            Content.RootDirectory = "./Content";
+            GameAssets = new Assets(Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -35,16 +53,16 @@ namespace Zambrin
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            // Runs prior to Draw() method.
 
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            // Renders all game assets and sprites.
 
             base.Draw(gameTime);
         }
