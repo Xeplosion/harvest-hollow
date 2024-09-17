@@ -1,6 +1,6 @@
 # Harvest Hollow Resources
 
-Here is a detailed list of all of the resources used for developing Zambrin:
+Here is a detailed list of all of the resources used for developing Harvest Hollow:
 
 ## Development Documents
 
@@ -13,7 +13,7 @@ Google docs containing development documentation:
 [Alchemy](https://docs.google.com/document/d/1jHAxWYe5U0fJ9wWJy6KMPtjyEqPfhrNv9qj-UyO83DQ/edit?usp=sharing)
 [Monsters](https://docs.google.com/document/d/1rEkuEO7BXYAT6QFLK777XHDkuEblXj7ckJEXlICwvUM/edit?usp=sharing)
 
-[Coding Design](https://docs.google.com/document/d/1nFlHCIOzXGvHE4mPddmzk2AM7fwrDd_FNmvhDWr9SJs/edit?usp=sharing)
+[Coding Design](../Documentation/CodeStructure/CodeDesign.md)
 
 [Character Sheets](https://docs.google.com/document/d/1zMzn-pmddCB7oPDzZtftc4VlQCBDhfrnHzPf3e9E4yw/edit?usp=sharing)
 [Character Creation Guide](https://docs.google.com/document/d/1uMS4jWP_KJcGg3PwLbbFvuYuEi_Sk42HhvQnUSw5Dbo/edit?usp=sharing)
