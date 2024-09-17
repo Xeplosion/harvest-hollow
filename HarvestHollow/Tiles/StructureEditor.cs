@@ -1,7 +1,7 @@
 ﻿// Ignore Spelling: LevelID UID
 using System.Collections.Generic;
 
-namespace HarvestHollow.Content.World
+namespace HarvestHollow.Tiles
 {
     internal interface IEditor
     {
@@ -24,7 +24,7 @@ namespace HarvestHollow.Content.World
 
     }
     internal interface IDefinition
-    { 
+    {
         public string Type { get; set; }
         public int GridSize { get; set; }
         public int GuideGridWidth { get; set; }
@@ -35,10 +35,10 @@ namespace HarvestHollow.Content.World
         public int ParallaxX { get; set; }
         public int ParallaxY { get; set; }
         public bool ParallaxScaling { get; set; }
-        public int[] AutoLayerKilled {  get; set; }
+        public int[] AutoLayerKilled { get; set; }
         public bool AsyncRender { get; set; }
         public List<IntGridStructure> IntGridValues { get; set; }
-        public List<IntGridGroupStructure> IntGridValuesGroup {  get; set; }
+        public List<IntGridGroupStructure> IntGridValuesGroup { get; set; }
         public List<AutoLayerRuleStructure> AutoRuleGroups { get; set; }
         public double TilePivotX { get; set; }
         public double TilePivotY { get; set; }
