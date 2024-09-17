@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 
 // These structures and classes are used both by the game and level editor.
+// For more information, view the level editor documentation: "../../../Documentation/CodeStructure/Levels.md".
 
 namespace HarvestHollow.Content.World
 {

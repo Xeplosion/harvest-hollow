@@ -1,11 +1,12 @@
-﻿using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Graphics;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Threading;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Media;
 using System.Diagnostics;
+using System.Threading;
+
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 
 namespace HarvestHollow.Content
 {
@@ -65,7 +66,7 @@ namespace HarvestHollow.Content
                 case AssetSection.TileSheets:
                     _tileSheets = GetTextures(section);
                     break;
-
+                // TODO: Once level editor is implemented, add the following case.
                 // Non Xna.Framework asset types.
                 case AssetSection.LDtk:
                     // Levels = GetLevels();
@@ -106,7 +107,7 @@ namespace HarvestHollow.Content
         // Renders the AssetLoader progress bar.
         protected void NotifyProgress()
         {
-            // TODO: make a asset loading progress bar.
+            // TODO: create neccessary GUI for progress bar.
         }
     }
 }
