@@ -1,10 +1,10 @@
-# Zambrin
+# Harvest Hollow
 
-## About Zambrin
+## About Harvest Hollow
 
 ### Style
 
-The gameplay of Zambrin is similar to that of Stardew Valley and Rune Factory - A Fantasy Harvest Moon with the combat style being more inspired by games like Chrono Trigger and the OG Final Fantasy Series.
+The gameplay of Harvest Hollow is similar to that of Stardew Valley and Rune Factory - A Fantasy Harvest Moon with the combat style being more inspired by games like Chrono Trigger and the OG Final Fantasy Series.
 
 The graphics style is resemblant of NES and PS1 JRPGs. The main sources of inspiration for the game's graphics are the Mana Series, Tales of Phantasia, Secret of Evermore, Terranigma, Illusion of Gaia, Star Ocean, and Chrono Trigger. Most sprites are 16x16 pixels in dimension and the only really big difference in graphics is the use of a more detailed color palette.
 
@@ -22,7 +22,7 @@ In the quietude of the night, as the stars emerge and the town's denizens seek r
 
 ### World
 
-Zambrin takes place in a 15th century medieval town called Caverston. Although the region has the environmental and climate conditions of medieval Europe, the game takes place in a fictional region named Amberr. Amberr is the southern region of a large unnamed continent directly above the inland sea of Nurnen. 
+Harvest Hollow takes place in a 15th century medieval town called Caverston. Although the region has the environmental and climate conditions of medieval Europe, the game takes place in a fictional region named Amberr. Amberr is the southern region of a large unnamed continent directly above the inland sea of Nurnen.
 
 Similarly to the medieval city of Kier Rus� located on the way from the Black to Baltic sea alongside a river, the town of Caverston is located alongside an important international trade route. However Caverston, unlike Kier Rus� was not created through the conquering, and instead inhabited by traders and merchants wishing to have a place to peacefully rest before continuing on their travels.
 
@@ -30,12 +30,11 @@ Similarly to the medieval city of Kier Rus� located on the way from the Black 
 
 To the north of the city are several farming regions. The most notable of which are titled Greattomb, Dustwish, Pria, and Ambershaw.
 
-The port city of Abouse located to the south of Caverston is significantly bigger, with a population of around 28,000 souls. This is the source of the majority of the merchants and travelers who visit the town of Caverston. The traders travel up the river Sillour to trade exotic goods for crops grown farther inland in order to feed their large population. As the traders travel back down the river, they stop at Caverston to trade excess food for the mysterious, and extremely valuable crystals and ores mined from the caves located all around the town of Caverston. 
+The port city of Abouse located to the south of Caverston is significantly bigger, with a population of around 28,000 souls. This is the source of the majority of the merchants and travelers who visit the town of Caverston. The traders travel up the river Sillour to trade exotic goods for crops grown farther inland in order to feed their large population. As the traders travel back down the river, they stop at Caverston to trade excess food for the mysterious, and extremely valuable crystals and ores mined from the caves located all around the town of Caverston.
 
 Sometimes Merchants and their crews, tired from their long journey, spend the night in the town's inn. When this happens, merchants set up in carts located around town to sell off excess exotics that they failed to trade farther inland.
 
-
-## Zambrin Asset Credit
+## Harvest Hollow Asset Credit
 
 ### Seliel the Shaper
 
@@ -43,8 +42,8 @@ Thanks to Seliel the Shaper whose gorgeous *Mana Seed* assets make up the majori
 
 ### Rebus Original Soundtracks & Classical Arrange
 
-The games OST comes from *Kartia: The Word of Fate Original Soundtracks & Classical Arrange*. Over 2 hours of perfect mood setting audio.
+The games OST comes from *Kartia: The Word of Fate Original Soundtracks & Classical Arrange*. Over 2 hours of perfect mood setting audio. Artist(s): *Kenichi Tsuchiya, Masaki Kurokawa.*
 
-###  Gameplay Content and Dialouge
+### Gameplay Content and Dialouge
 
-*Zambrin* uses the extended version of the MonoGame engine. All gameplay content and dialouge are 100% owned and created by *Xeplosion Games Coorperation*.
+*Harvest Hollow* uses the extended version of the MonoGame engine. All gameplay content and dialouge are 100% owned and created by *Xeplosion Games Coorperation*.
