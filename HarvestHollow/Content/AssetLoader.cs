@@ -8,7 +8,7 @@ using System.Linq;
 using System.IO;
 using System.Diagnostics;
 
-namespace Zambrin.Content
+namespace HarvestHollow.Content
 {
     internal abstract class AssetLoader : AssetDictionary
     {

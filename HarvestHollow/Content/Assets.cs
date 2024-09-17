@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
 using System.Diagnostics;
 
-namespace Zambrin.Content
+namespace HarvestHollow.Content
 {
     internal class Assets : AssetLoader
     {

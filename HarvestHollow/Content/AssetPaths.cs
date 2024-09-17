@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Zambrin.Content
+namespace HarvestHollow.Content
 {
     internal class AssetDictionary
     {

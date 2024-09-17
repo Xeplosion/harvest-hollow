@@ -1,14 +1,16 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
+using Newtonsoft.Json;
 using Microsoft.Xna.Framework;
+using MonoGame.Extended.Serialization;
 
 namespace HarvestHollow
 {
     public static class ProjectSettings
     {
         // Access project data.
-        private static readonly string _jsonText = File.ReadAllText("./Zambrin.json");
+        private static readonly string _jsonText = File.ReadAllText("./Settings.json");
         private static readonly JsonStructure _jsonData = JsonConvert.DeserializeObject<JsonStructure>(_jsonText);
 
         public static readonly string NAME;
@@ -57,4 +59,3 @@ namespace HarvestHollow
         internal bool CustomLaunchCommands { get; set; }
     }
 }
-

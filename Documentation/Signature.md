@@ -1,11 +1,11 @@
-# Work Signature
+# Harvest Hollow Development Signature
 
-A table showing how much time was spent on what. 
+A table showing how much time was spent on what.
 
-| Date         | Time Spent | Events
-|--------------|------------|--------------------
-| September 16 | 3 hours    | Setup the GitHub repo. and branch structure.
-| September 16 | 0.25 hours | Added project documentation and a basic README.md file.
-| September 14 | 1.75 hours | Debugged and fixed issues with ai strategy.
-| September 14 | 0.5 hours  | Refactored and removed useless functions.
-| TOTAL        | 3.5 hours  | 
+| Date         | Time Spent | Developer |   Events
+|--------------|------------|-----------|---------------------
+| September 16 | 3.0 hours  | Xeplosion | Setup the GitHub repo. and branch structure.
+| September 16 | 0.25 hours | Xeplosion | Added project documentation and a basic README.md file.
+| September 17 | 0.5 hours  | Xeplosion | Changed name to Harvest Hollow. Refactored accordingly.
+| September 17 | 3.0 hours  | Xeplosion | Expanded documentation.
+| TOTAL        | 6.75 hours |           |

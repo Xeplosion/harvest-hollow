@@ -6,16 +6,16 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
-using Zambrin.Content;
+using HarvestHollow.Content;
 
-namespace Zambrin
+namespace HarvestHollow
 {
-    public class Zambrin : Game
+    public class HarvestHollow : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Zambrin()
+        public HarvestHollow()
         {
             // Graphical settings.
             _graphics = new GraphicsDeviceManager(this);
