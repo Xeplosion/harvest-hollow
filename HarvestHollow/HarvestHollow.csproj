@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Content\Icon.ico</ApplicationIcon>
+    <Authors>"Xeplosion"</Authors>
+    <Company>Xeplosion Games Corp.</Company>
+    <PackageProjectUrl>https://xegames.online/harvest-hollow</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Xeplosion/harvest-hollow</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>2D tile scroller; harvest moon clone; JRPG;</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <Copyright>Copytight Xeplosion Games Corp. 2024</Copyright>
+    <Description>Harvest Hollow is a 2D tile scrolling JRPG styled game.</Description>
+    <Title>Harvest Hollow</Title>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Content\Icon.ico" />
+    <None Remove="Content\Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\Icon.ico" />
+    <EmbeddedResource Include="Content\Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ILGPU" Version="1.5.1" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\World\Backups\" />
+    <Folder Include="Content\World\HarvestHollow\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+    <Message Text="Restoring dotnet tools" Importance="High" />
+    <Exec Command="dotnet tool restore" />
+  </Target>
+</Project>
