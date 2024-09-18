@@ -322,12 +322,6 @@ namespace HarvestHollow.Content
                     }
                 },
                 {
-                    AssetSection.LDtk, new List<(string, string)>
-                    {
-
-                    }
-                },
-                {
                     AssetSection.CharacterSheets, new List<(string, string)>
                     {
                         // /* ---- CHARACTER SHEETS ---- */

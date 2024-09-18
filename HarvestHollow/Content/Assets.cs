@@ -13,88 +13,88 @@ namespace HarvestHollow.Content
     internal class Assets : AssetLoader
     {
         // Asset variables containing references to all loaded assets.
-        private static Dictionary<string, SpriteFont> _fonts;
-        private static Dictionary<string, SoundEffect> _soundEffects;
-        private static Dictionary<string, Song> _music;
-        private static Dictionary<string, Texture2D> _characters;
-        private static Dictionary<string, Texture2D> _characterEffects;
-        private static Dictionary<string, Texture2D> _NPCs;
-        private static Dictionary<string, Texture2D> _paletteSwap;
-        private static Dictionary<string, Texture2D> _spriteSheets;
-        private static Dictionary<string, Texture2D> _tileSheets;
+        private static Dictionary<string, SpriteFont> _s_fonts;
+        private static Dictionary<string, SoundEffect> _s_soundEffects;
+        private static Dictionary<string, Song> _s_music;
+        private static Dictionary<string, Texture2D> _s_characters;
+        private static Dictionary<string, Texture2D> _s_characterEffects;
+        private static Dictionary<string, Texture2D> _s_NPCs;
+        private static Dictionary<string, Texture2D> _s_paletteSwap;
+        private static Dictionary<string, Texture2D> _s_spriteSheets;
+        private static Dictionary<string, Texture2D> _s_tileSheets;
 
-        internal static Dictionary<string, SpriteFont> Fonts { get { return _fonts; } }
-        internal static Dictionary<string, SoundEffect> SoundEffects { get { return _soundEffects; } }
-        internal static Dictionary<string, Song> Music { get { return _music; } }
-        internal static Dictionary<string, Texture2D> Characters { get { return _characters; } }
-        internal static Dictionary<string, Texture2D> CharacterEffects { get { return _characterEffects; } }
-        internal static Dictionary<string, Texture2D> NPCs { get { return _NPCs; } }
-        internal static Dictionary<string, Texture2D> PaletteSwap { get { return _paletteSwap; } }
-        internal static Dictionary<string, Texture2D> SpriteSheets { get { return _spriteSheets; } }
-        internal static Dictionary<string, Texture2D> TileSheets { get { return _tileSheets; } }
+        internal static Dictionary<string, SpriteFont> Fonts { get { return _s_fonts; } }
+        internal static Dictionary<string, SoundEffect> SoundEffects { get { return _s_soundEffects; } }
+        internal static Dictionary<string, Song> Music { get { return _s_music; } }
+        internal static Dictionary<string, Texture2D> Characters { get { return _s_characters; } }
+        internal static Dictionary<string, Texture2D> CharacterEffects { get { return _s_characterEffects; } }
+        internal static Dictionary<string, Texture2D> NPCs { get { return _s_NPCs; } }
+        internal static Dictionary<string, Texture2D> PaletteSwap { get { return _s_paletteSwap; } }
+        internal static Dictionary<string, Texture2D> SpriteSheets { get { return _s_spriteSheets; } }
+        internal static Dictionary<string, Texture2D> TileSheets { get { return _s_tileSheets; } }
 
         // Constructor required for superclass AssetLoader function.
         internal Assets(ContentManager contentManager) : base(contentManager) { LoadAllAssets(); }
 
         // Functions to load asset groups based off their assigned thread.
-        private static void LoadAssetGroup(AssetSection section)
+        private static void s_LoadAssetSection(AssetSection section)
         {
             // Loads all game assets.
             switch (section)
             {
                 case AssetSection.SFX:
-                    _soundEffects = GetSoundEffects(section);
+                    _s_soundEffects = s_GetSoundEffects(section);
                     break;
                 case AssetSection.OST:
-                    _music = GetSongs(section);
+                    _s_music = s_GetSongs(section);
                     break;
                 case AssetSection.CharacterSheets:
-                    _characters = GetTextures(section);
+                    _s_characters = s_GetTextures(section);
                     break;
                 case AssetSection.CharacterEffects:
-                    _characterEffects = GetTextures(section);
+                    _s_characterEffects = s_GetTextures(section);
                     break;
                 case AssetSection.NPC:
-                    _NPCs = GetTextures(section);
+                    _s_NPCs = s_GetTextures(section);
                     break;
                 case AssetSection.PaletteSwap:
-                    _paletteSwap = GetTextures(section);
+                    _s_paletteSwap = s_GetTextures(section);
                     break;
                 case AssetSection.SpriteSheets:
-                    _spriteSheets = GetTextures(section);
+                    _s_spriteSheets = s_GetTextures(section);
                     break;
                 case AssetSection.TileSheets:
-                    _tileSheets = GetTextures(section);
+                    _s_tileSheets = s_GetTextures(section);
                     break;
                 case AssetSection.Fonts:
-                    _fonts = GetFonts();
+                    _s_fonts = s_GetFonts();
                     break;
                 default:
                     Debug.WriteLine("ERROR: Invalid AssetSection");
                     break;
             }
         }
-        private static void LoadThreadAssets (object thread)
+        private static void s_LoadThreadAssets (object thread)
         {
             // Evenly distributes asset loads into threads.
             foreach (AssetSection section in AssetPaths.Keys)
             {
-                if (_sortedThreads[section] == (int)thread) { LoadAssetGroup(section); }
+                if (_s_sortedThreads[section] == (int)thread) { s_LoadAssetSection(section); }
             }
         }
 
         // Loads all game assets in separate threads.
-        private static Thread[] _loaderThreads = new Thread[Environment.ProcessorCount - 1];
-        internal static Thread[] LoaderThreads { get { return _loaderThreads; } }
-        private static Dictionary<AssetSection, int> _sortedThreads;
+        private static Thread[] _s_LoaderThreads = new Thread[Environment.ProcessorCount - 1];
+        internal static Thread[] LoaderThreads { get { return _s_LoaderThreads; } }
+        private static Dictionary<AssetSection, int> _s_sortedThreads;
         internal static void LoadAllAssets()
         {
             Debug.WriteLine("\nLOADING ALL ASSETS:");
-            _sortedThreads = GetThreadDistribution(_loaderThreads.Length);
-            for (int thread = 0; thread < _loaderThreads.Length; thread++) {
-                _loaderThreads[thread] = new Thread(LoadThreadAssets);
-                _loaderThreads[thread].Name = $"AssetLoader{thread}";
-                _loaderThreads[thread].Start(thread);
+            _s_sortedThreads = s_GetThreadDistribution(_s_LoaderThreads.Length);
+            for (int thread = 0; thread < _s_LoaderThreads.Length; thread++) {
+                _s_LoaderThreads[thread] = new Thread(s_LoadThreadAssets);
+                _s_LoaderThreads[thread].Name = $"AssetLoader{thread}";
+                _s_LoaderThreads[thread].Start(thread);
             }
         }
         internal static void ReloadAllAssets() { LoadAllAssets(); }

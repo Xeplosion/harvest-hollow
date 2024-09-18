@@ -12,34 +12,33 @@ namespace HarvestHollow.Content
 {
     internal abstract class AssetLoader : AssetDictionary
     {
-        private static ContentManager _contentManager;
+        private static ContentManager _s_contentManager { get; set; }
         protected AssetLoader(ContentManager contentManager) 
         {
             // Initialize content manager for loading assets.
-            _contentManager = contentManager;
-            InitializeAssetCounts();
+            _s_contentManager = contentManager;
+            s_InitializeAssetCounts();
             SoundEffect.Initialize(); // Needed to make multi-threaded asset loading function.
         }
-
         // Variables to keep track of asset loading progress.
-        private static Dictionary<AssetSection, int> _totalAssetsPerSection;
-        private static Dictionary<AssetSection, int> _currentSectionProgress;
+        private static Dictionary<AssetSection, int> _s_TotalAssetsPerSection;
+        private static Dictionary<AssetSection, int> _s_CurrentSectionProgress;
         private static int _totalAssets;
         private static float _progress;
-        protected static void InitializeAssetCounts()
+        protected static void s_InitializeAssetCounts()
         {
             // Computes the total number of assets. 
-            _totalAssetsPerSection = new Dictionary<AssetSection, int>();
-            _currentSectionProgress = new Dictionary<AssetSection, int>();
+            _s_TotalAssetsPerSection = new Dictionary<AssetSection, int>();
+            _s_CurrentSectionProgress = new Dictionary<AssetSection, int>();
             foreach (AssetSection section in AssetPaths.Keys)
             {
-                _totalAssetsPerSection[section] = AssetPaths[section].Count;
+                _s_TotalAssetsPerSection[section] = AssetPaths[section].Count;
                 _totalAssets += AssetPaths[section].Count;
-                _currentSectionProgress[section] = 0;
+                _s_CurrentSectionProgress[section] = 0;
             }
         }
         // Asset loading functions separated by return types.
-        protected static Dictionary<string, SoundEffect> GetSoundEffects(AssetSection section)
+        protected static Dictionary<string, SoundEffect> s_GetSoundEffects(AssetSection section)
         {
             Dictionary<string, SoundEffect> assets = new Dictionary<string, SoundEffect>();
             foreach (var (assetName, assetPath) in AssetPaths[section])
@@ -47,10 +46,8 @@ namespace HarvestHollow.Content
                 try
                 {
                     // Attempt to load asset.
-                    SoundEffect asset = _contentManager.Load<SoundEffect>(assetPath);
+                    SoundEffect asset = _s_contentManager.Load<SoundEffect>(assetPath);
                     assets.Add(assetName, asset);
-
-                    // TODO: add code for debug output.
                 }
                 catch (FileNotFoundException fnfe)
                 {
@@ -65,15 +62,15 @@ namespace HarvestHollow.Content
                 finally
                 {
                     //Increment section progress.
-                    NotifyProgress(section);
-                    _currentSectionProgress[section]++;
+                    s_NotifyProgress(section);
+                    _s_CurrentSectionProgress[section]++;
                     _progress++;
                 }
             }
             // Return the Dictionary of assets.
             return assets;
         }
-        protected static Dictionary<string, Song> GetSongs (AssetSection section)
+        protected static Dictionary<string, Song> s_GetSongs (AssetSection section)
         {
             Dictionary<string, Song> assets = new Dictionary<string, Song>();
             foreach (var (assetName, assetPath) in AssetPaths[section])
@@ -81,10 +78,8 @@ namespace HarvestHollow.Content
                 try
                 {
                     // Attempt to load asset.
-                    Song asset = _contentManager.Load<Song>(assetPath);
+                    Song asset = _s_contentManager.Load<Song>(assetPath);
                     assets.Add(assetName, asset);
-
-                    // TODO: add code for debug output.
                 }
                 catch (FileNotFoundException fnfe)
                 {
@@ -99,15 +94,15 @@ namespace HarvestHollow.Content
                 finally
                 {
                     //Increment section progress.
-                    NotifyProgress(section);
-                    _currentSectionProgress[section]++;
+                    s_NotifyProgress(section);
+                    _s_CurrentSectionProgress[section]++;
                     _progress++;
                 }
             }
             // Return the Dictionary of assets.
             return assets;
         }
-        protected static Dictionary<string, Texture2D> GetTextures(AssetSection section)
+        protected static Dictionary<string, Texture2D> s_GetTextures(AssetSection section)
         {
             Dictionary<string, Texture2D> assets = new Dictionary<string, Texture2D>();
             foreach (var (assetName, assetPath) in AssetPaths[section])
@@ -115,10 +110,8 @@ namespace HarvestHollow.Content
                 try
                 {
                     // Attempt to load asset.
-                    Texture2D asset = _contentManager.Load<Texture2D>(assetPath);
+                    Texture2D asset = _s_contentManager.Load<Texture2D>(assetPath);
                     assets.Add(assetName, asset);
-
-                    // TODO: add code for debug output.
                 }
                 catch (FileNotFoundException fnfe)
                 {
@@ -133,8 +126,8 @@ namespace HarvestHollow.Content
                 finally
                 {
                     //Increment section progress.
-                    NotifyProgress(section);
-                    _currentSectionProgress[section]++;
+                    s_NotifyProgress(section);
+                    _s_CurrentSectionProgress[section]++;
                     _progress++;
                 }
             }
@@ -143,7 +136,7 @@ namespace HarvestHollow.Content
         }
         
         // TODO: add level loading.
-        protected static Dictionary<string, SpriteFont> GetFonts()
+        protected static Dictionary<string, SpriteFont> s_GetFonts()
         {
             Dictionary<string, SpriteFont> assets = new Dictionary<string, SpriteFont>();
             foreach (var (assetName, assetPath) in AssetPaths[AssetSection.Fonts])
@@ -151,10 +144,8 @@ namespace HarvestHollow.Content
                 try
                 {
                     // Attempt to load asset.
-                    SpriteFont asset = _contentManager.Load<SpriteFont>(assetPath);
+                    SpriteFont asset = _s_contentManager.Load<SpriteFont>(assetPath);
                     assets.Add(assetName, asset);
-
-                    // TODO: add code for debug output.
                 }
                 catch (FileNotFoundException fnfe)
                 {
@@ -169,8 +160,8 @@ namespace HarvestHollow.Content
                 finally
                 {
                     //Increment section progress.
-                    NotifyProgress(AssetSection.Fonts);
-                    _currentSectionProgress[AssetSection.Fonts]++;
+                    s_NotifyProgress(AssetSection.Fonts);
+                    _s_CurrentSectionProgress[AssetSection.Fonts]++;
                     _progress++;
                 }
             }
@@ -179,7 +170,7 @@ namespace HarvestHollow.Content
         }
 
         // Finds the optimal thread distribution for loading assets.
-        protected static Dictionary<AssetSection, int> GetThreadDistribution(int coreCount)
+        protected static Dictionary<AssetSection, int> s_GetThreadDistribution(int coreCount)
         {
             // DEBUG MESSAGES:
             Debug.WriteLine($"\nSORTING THREADS INTO {coreCount} AVAILABLE CORES:\n");
@@ -189,7 +180,7 @@ namespace HarvestHollow.Content
             int sortIndex = 0;
             foreach (AssetSection section in AssetPaths.Keys)
             {
-                unsortedAssetSection[sortIndex] = (section, _totalAssetsPerSection[section]);
+                unsortedAssetSection[sortIndex] = (section, _s_TotalAssetsPerSection[section]);
                 sortIndex++;
             }
 
@@ -261,21 +252,21 @@ namespace HarvestHollow.Content
         }
 
         // Updates the loading progress bar.
-        private static float _progressBar;
-        private static string _progressBarText;
-        protected static float ProgressBar { get { return _progressBar; } }
-        protected static string ProgressBarText { get { return _progressBarText; } }
-        private static void NotifyProgress(AssetSection section)
+        private static float _s_progressBar;
+        private static string _s_progressBarText;
+        protected static float ProgressBar { get { return _s_progressBar; } }
+        protected static string ProgressBarText { get { return _s_progressBarText; } }
+        private static void s_NotifyProgress(AssetSection section)
         {
             // Update main progress bar
-            _progressBar = _progress / _totalAssets;
-            _progressBarText = $"Loaded {_progress} / {_totalAssets} total assets.";
+            _s_progressBar = _progress / _totalAssets;
+            _s_progressBarText = $"Loaded {_progress} / {_totalAssets} total assets.";
 
             // DEBUG MESSAGES:
             if (!ProjectSettings.DEVELOPER) { return;  }
             Debug.WriteLine(
-                $"Loaded asset '{AssetPaths[section][_currentSectionProgress[section]]}'; " +
-                $"Current section progress {_currentSectionProgress[section]} / {_totalAssetsPerSection[section]};"
+                $"Loaded asset '{AssetPaths[section][_s_CurrentSectionProgress[section]]}'; " +
+                $"Current section progress {_s_CurrentSectionProgress[section]} / {_s_TotalAssetsPerSection[section]};"
             );
         }
     }
