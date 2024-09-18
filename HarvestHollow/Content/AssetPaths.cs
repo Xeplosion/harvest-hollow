@@ -1119,7 +1119,6 @@ namespace HarvestHollow.Content
         {
             SFX,
             OST,
-            LDtk,
             CharacterSheets,
             CharacterEffects,
             NPC,

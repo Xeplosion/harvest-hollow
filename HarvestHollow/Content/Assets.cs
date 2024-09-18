@@ -66,11 +66,6 @@ namespace HarvestHollow.Content
                 case AssetSection.TileSheets:
                     _tileSheets = GetTextures(section);
                     break;
-                // TODO: Once level editor is implemented, add the following case.
-                // Non Xna.Framework asset types.
-                case AssetSection.LDtk:
-                    // Levels = GetLevels();
-                    break;
                 case AssetSection.Fonts:
                     _fonts = GetFonts();
                     break;

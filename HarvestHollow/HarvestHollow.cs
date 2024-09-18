@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 using HarvestHollow.Content;
+using System.Diagnostics;
 
 namespace HarvestHollow
 {
@@ -35,6 +36,14 @@ namespace HarvestHollow
         {
             // Loads all non-graphical content.
             Console.WriteLine("Running initialization logic...");
+            if (ProjectSettings.LOAD_LEVEL_EDITOR)
+            {
+                // Code for level editor here.
+            } else
+            {
+                // Regular launch initialization.
+            }
+
             base.Initialize();
         }
         internal Assets GameAssets;
@@ -42,7 +51,9 @@ namespace HarvestHollow
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // Loads all graphical game content.
+            // TODO: add all loading screen assets.
+
+            // Loads all audio and graphical content.
             Console.WriteLine("Loading game content...");
 
             Content.RootDirectory = "./Content";
@@ -55,6 +66,12 @@ namespace HarvestHollow
                 Exit();
 
             // Runs prior to Draw() method.
+            if (ProjectSettings.LOAD_LEVEL_EDITOR)
+            {
+                // Code for level editor here.
+                base.Update(gameTime);
+                return; // No need to update the rest of the game.
+            }
 
             base.Update(gameTime);
         }

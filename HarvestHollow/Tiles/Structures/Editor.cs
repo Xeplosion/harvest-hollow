@@ -1,7 +1,7 @@
 ﻿// Ignore Spelling: LevelID UID
 using System.Collections.Generic;
 
-namespace HarvestHollow.Tiles
+namespace HarvestHollow.Tiles.Structures
 {
     internal interface IEditor
     {

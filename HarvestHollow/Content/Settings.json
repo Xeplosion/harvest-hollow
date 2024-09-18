@@ -5,7 +5,7 @@
 	"settings": {
 		"developer": true,
 		"detailedOutput": true,
-		"loadLevelEditor": false,
+		"loadLevelEditor": true,
 		"customLaunchCommands": true
 	},
 	"author": "Foster Cavender 'Xeplosion' <xeplosion@xegames.online>",
