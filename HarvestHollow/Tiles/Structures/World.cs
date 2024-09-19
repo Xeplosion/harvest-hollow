@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using HarvestHollow.Tiles;
 
 // These structures and classes are used both by the game and level editor.
 // For more information, view the level editor documentation: "../../../Documentation/CodeStructure/Levels.md".
 
-namespace HarvestHollow.Tiles
+namespace HarvestHollow.Tiles.Structures
 {
     // A world is a collection of levels.
-    internal class StuctureWorld
+    internal class World
     {
     }
 
@@ -41,7 +40,7 @@ namespace HarvestHollow.Tiles
     }
 
     // Contains all level component definitions.
-    internal struct IDefinitionsStructure
+    internal interface IDefinitionsStructure
     {
         public List<IDefinition> Layers { get; set; }
         public List<EntityStructure> Entities { get; set; }
