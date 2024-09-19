@@ -56,7 +56,7 @@ namespace HarvestHollow.Content
                 }
                 catch (Exception ex)
                 {
-                    // Handles all other exceptions
+                    // Handles all other exceptions.
                     Debug.WriteLine($"Error attempting to load file {assetName}: {ex.Message}");
                 }
                 finally
@@ -88,7 +88,7 @@ namespace HarvestHollow.Content
                 }
                 catch (Exception ex)
                 {
-                    // Handles all other exceptions
+                    // Handles all other exceptions.
                     Debug.WriteLine($"Error attempting to load file {assetName}: {ex.Message}");
                 }
                 finally
@@ -120,7 +120,7 @@ namespace HarvestHollow.Content
                 }
                 catch (Exception ex)
                 {
-                    // Handles all other exceptions
+                    // Handles all other exceptions.
                     Debug.WriteLine($"Error attempting to load file {assetName}: {ex.Message}");
                 }
                 finally
@@ -154,7 +154,7 @@ namespace HarvestHollow.Content
                 }
                 catch (Exception ex)
                 {
-                    // Handles all other exceptions
+                    // Handles all other exceptions.
                     Debug.WriteLine($"Error attempting to load file {assetName}: {ex.Message}");
                 }
                 finally
