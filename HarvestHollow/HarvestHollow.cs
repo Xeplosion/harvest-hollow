@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
 using HarvestHollow.Content;
+using HarvestHollow.Tiles;
 using System.Diagnostics;
 
 namespace HarvestHollow
@@ -31,11 +32,15 @@ namespace HarvestHollow
             _graphics.SynchronizeWithVerticalRetrace = false;
             IsMouseVisible = false;
         }
-
+        internal TileScroller Tiles;
         protected override void Initialize()
         {
             // Loads all non-graphical content.
             Console.WriteLine("Running initialization logic...");
+
+            // Initialize tile scrolling engine
+            Tiles = new TileScroller(GraphicsDevice.DisplayMode.Width, GraphicsDevice.DisplayMode.Height)
+
             if (ProjectSettings.LOAD_LEVEL_EDITOR)
             {
                 // Code for level editor here.
