@@ -1,4 +1,4 @@
-# *Harvest Hollow* Code Design
+# Harvest Hollow Code Design
 
 ## About
 
