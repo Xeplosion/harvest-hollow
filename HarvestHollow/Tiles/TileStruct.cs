@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HarvestHollow.Tiles
 {
-    public struct TileStruct
+    internal struct TileStruct
     {
         public int ScreenX { get; set; }
         public int ScreenY { get; set; }

@@ -34,14 +34,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ILGPU" Version="1.5.1" />
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.2.1105" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\World\Backups\" />
-    <Folder Include="Content\World\HarvestHollow\" />
+    <Folder Include="Tiles\World\Backups\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE.txt">
@@ -57,4 +56,5 @@
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />
   </Target>
+  <ProjectExtensions><VisualStudio><UserProperties tiles_4world_4worldschema_1json__JsonSchema="https://coderabbit.ai/integrations/schema.v2.json" /></VisualStudio></ProjectExtensions>
 </Project>
