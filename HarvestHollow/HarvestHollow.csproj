@@ -25,6 +25,11 @@
 	<MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="pipeline-references\**" />
+    <EmbeddedResource Remove="pipeline-references\**" />
+    <None Remove="pipeline-references\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Content\Icon.ico" />
     <None Remove="Content\Icon.bmp" />
   </ItemGroup>

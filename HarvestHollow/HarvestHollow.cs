@@ -61,10 +61,8 @@ namespace HarvestHollow
             // TODO: add all loading screen assets.
 
             // Loads all audio and graphical content.
-            Console.WriteLine("Loading game content...");
-
             Content.RootDirectory = "./Content";
-            //GameAssets = new Assets(Content);
+            GameAssets = new Assets(Content);
         }
 
         protected override void Update(GameTime gameTime)
