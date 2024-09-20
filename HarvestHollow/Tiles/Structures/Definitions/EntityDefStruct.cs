@@ -1,8 +1,12 @@
-﻿namespace HarvestHollow.Tiles.Structures.Definitions
+﻿using System.Text.Json.Serialization;
+
+namespace HarvestHollow.Tiles.Structures.Definitions
 {
     internal struct EntityDefStruct
     {
+        [JsonPropertyName("identifier")]
         public string Identifier { get; set; }
+        [JsonPropertyName("uid")]
         public int Uid { get; set; }
         public string Color { get; set; }
         public int Width { get; set; }

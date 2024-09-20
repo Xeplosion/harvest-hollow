@@ -35,12 +35,16 @@
   <ItemGroup>
     <PackageReference Include="ILGPU" Version="1.5.1" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0" />
-    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Tiles\Schemas\Definitions\" />
+    <Folder Include="Tiles\Structures\Levels\" />
     <Folder Include="Tiles\World\Backups\" />
+    <Folder Include="Tiles\World\Layers\" />
+    <Folder Include="Tiles\World\Levels\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\LICENSE.txt">
@@ -56,5 +60,5 @@
     <Message Text="Restoring dotnet tools" Importance="High" />
     <Exec Command="dotnet tool restore" />
   </Target>
-  <ProjectExtensions><VisualStudio><UserProperties tiles_4world_4worldschema_1json__JsonSchema="https://coderabbit.ai/integrations/schema.v2.json" /></VisualStudio></ProjectExtensions>
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

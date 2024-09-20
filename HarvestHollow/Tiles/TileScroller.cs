@@ -42,7 +42,7 @@ namespace HarvestHollow.Tiles
                 int tileY = -_tileSize / 2 - _tileSize * _tileCountY / 2;
                 for (int y = 0; y < _tileCountY; y++)
                 {
-                    tiles.Push(new TileStruct(tileX, tileY));
+                    // tiles.Push(new TileStruct(tileX, tileY));
                     tileY += _tileSize;
                 }
                 tileX += _tileSize;
@@ -57,17 +57,18 @@ namespace HarvestHollow.Tiles
             // TODO: add draw code here.
         }
 
-        private GetTiles()
+        private void GetTiles()
         {
-            
+
         }
-        private GetTile()
+        private void GetTile()
         {
 
         }
 
         private void UpdateTiles()
         {
-            _tiles[1] = new TileStruct(0, 0);
+            // _tiles[1] = new TileStruct(0, 0);
         }
+    }
 }

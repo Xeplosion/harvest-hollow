@@ -39,7 +39,7 @@ namespace HarvestHollow
             Console.WriteLine("Running initialization logic...");
 
             // Initialize tile scrolling engine
-            Tiles = new TileScroller(GraphicsDevice.DisplayMode.Width, GraphicsDevice.DisplayMode.Height)
+            Tiles = new TileScroller(GraphicsDevice.DisplayMode.Width, GraphicsDevice.DisplayMode.Height);
 
             if (ProjectSettings.LOAD_LEVEL_EDITOR)
             {
@@ -62,7 +62,7 @@ namespace HarvestHollow
             Console.WriteLine("Loading game content...");
 
             Content.RootDirectory = "./Content";
-            GameAssets = new Assets(Content);
+            //GameAssets = new Assets(Content);
         }
 
         protected override void Update(GameTime gameTime)
