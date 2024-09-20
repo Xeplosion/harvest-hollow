@@ -1,58 +1,58 @@
-﻿using System.IO;
-using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
+using MonoGame.Extended.Content.ContentReaders;
 
 namespace HarvestHollow
 {
-    internal class ProjectSettings
+    internal static class ProjectSettings
     {
-        protected ProjectSettings() { }
-        // Access project data.
-        private static readonly string _jsonText = File.ReadAllText("./Settings.json");
-        private static readonly JsonStructure _jsonData = JsonConvert.DeserializeObject<JsonStructure>(_jsonText);
-
-        public static readonly string NAME;
-        public static readonly string VERSION;
-        public static readonly string DESCRIPTION;
-        public static readonly bool DEVELOPER;
-        public static readonly bool DETAILED_OUTPUT;
-        public static readonly bool LOAD_LEVEL_EDITOR;
-        public static readonly bool CUSTOM_LAUNCH_COMMANDS;
-        public static readonly string AUTHOR;
-        public static readonly string LICENSE;
-
-#pragma warning disable S3963 // "static" fields should be initialized inline
-        static ProjectSettings()
+        public static string Name;
+        public static string Version;
+        public static string Description;
+        public static string Author;
+        public static string License;
+        public static bool Developer;
+        public static bool DetailedOutput;
+        public static bool LoadLevelEditor;
+        public static bool CustomLaunchCommands;
+        public static void CreateSettings(ProjectSettingsStruct settings)
         {
-            // Change the project settings
-            NAME = _jsonData.Name;
-            VERSION = _jsonData.Version;
-            DESCRIPTION = _jsonData.Description;
-
-            DEVELOPER = _jsonData.Settings.Developer;
-            DETAILED_OUTPUT = _jsonData.Settings.DetailedOutput;
-            LOAD_LEVEL_EDITOR = _jsonData.Settings.LoadLevelEditor;
-            CUSTOM_LAUNCH_COMMANDS = _jsonData.Settings.CustomLaunchCommands;
-
-            AUTHOR = _jsonData.Author;
-            LICENSE = _jsonData.License;
+            // Set the project settings.
+            Name = settings.Name;
+            Version = settings.Version;
+            Description = settings.Description;
+            Author = settings.Author;
+            License = settings.License;
+            Developer = settings.Settings.Developer;
+            DetailedOutput = settings.Settings.DetailedOutput;
+            LoadLevelEditor = settings.Settings.LoadLevelEditor;
+            CustomLaunchCommands = settings.Settings.CustomLaunchCommands;
         }
     }
-
-    // Structs for JSON data
-    internal struct JsonStructure
+    internal struct ProjectSettingsStruct
     {
+        [JsonPropertyName("name")]
         internal string Name { get; set; }
+        [JsonPropertyName("version")]
         internal string Version { get; set; }
+        [JsonPropertyName("description")]
         internal string Description { get; set; }
+        [JsonPropertyName("settings")]
         internal SettingStructure Settings { get; set; }
+        [JsonPropertyName("author")]
         internal string Author { get; set; }
+        [JsonPropertyName("license")]
         internal string License { get; set; }
     }
     internal struct SettingStructure
     {
+        [JsonPropertyName("developer")]
         internal bool Developer { get; set; }
+        [JsonPropertyName("detailedOutput")]
         internal bool DetailedOutput { get; set; }
+        [JsonPropertyName("loadLevelEditor")]
         internal bool LoadLevelEditor { get; set; }
+        [JsonPropertyName("customLaunchCommands")]
         internal bool CustomLaunchCommands { get; set; }
     }
+    internal class ProjectSettingsReader : JsonContentTypeReader<ProjectSettingsStruct> { }
 }

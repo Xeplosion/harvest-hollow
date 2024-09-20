@@ -11,7 +11,7 @@ def list_files_with_os(directory, root):
             file_paths.append(relative_path)
     return file_paths
 
-directory = '../HarvestHollow/Content/Images/SpriteSheets'  # Directory being checked for files
+directory = '../HarvestHollow/Content/'  # Directory being checked for files
 root = '../HarvestHollow/Content'                # New root for the file paths
 files = list_files_with_os(directory, root)
 for file in files:

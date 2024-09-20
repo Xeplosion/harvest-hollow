@@ -21,6 +21,9 @@
     <Description>Harvest Hollow is a 2D tile scrolling JRPG styled game.</Description>
     <Title>Harvest Hollow</Title>
   </PropertyGroup>
+  <PropertyGroup>
+	<MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="Content\Icon.ico" />
     <None Remove="Content\Icon.bmp" />
@@ -35,6 +38,8 @@
   <ItemGroup>
     <PackageReference Include="ILGPU" Version="1.5.1" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Extended" Version="4.0.0" />
+    <PackageReference Include="MonoGame.Extended.Content.Pipeline" Version="4.0.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
