@@ -41,6 +41,8 @@ namespace HarvestHollow
             // Initialize tile scrolling engine
             Tiles = new TileScroller(GraphicsDevice.DisplayMode.Width, GraphicsDevice.DisplayMode.Height);
 
+            // TODO: fix all of the Project Settings code.
+            /*
             if (ProjectSettings.LOAD_LEVEL_EDITOR)
             {
                 // Code for level editor here.
@@ -48,6 +50,7 @@ namespace HarvestHollow
             {
                 // Regular launch initialization.
             }
+            */
 
             base.Initialize();
         }
@@ -70,6 +73,8 @@ namespace HarvestHollow
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            // TODO: fix all of the Project Settings code.
+            /*
             // Runs prior to Draw() method.
             if (ProjectSettings.LOAD_LEVEL_EDITOR)
             {
@@ -77,6 +82,7 @@ namespace HarvestHollow
                 base.Update(gameTime);
                 return; // No need to update the rest of the game.
             }
+            */
 
             base.Update(gameTime);
         }
