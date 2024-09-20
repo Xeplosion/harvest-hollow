@@ -12,4 +12,5 @@ A table showing how much time was spent on what.
 | September 17 | 2.5 hours  | Xeplosion | Started work on the tile scrolling engine / level editor.
 | September 18 | 3.0 hours  | Xeplosion | Continued work on the tile scrolling engine / level editor.
 | September 18 | 2.0 hours  | Xeplosion | Added .editor config file to enforce conventions and refactored existing code.
+| Septembet 19 | 2.5 hours  | Xeplosion | Continued work on the level editor.
 | TOTAL        | 28.5 hours |           | <-- that's a lot of hours wasted!

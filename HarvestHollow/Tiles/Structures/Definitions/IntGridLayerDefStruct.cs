@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HarvestHollow.Tiles.Structures.Definitions
 {
-    internal struct AutoLayerDefStruct : ILayerDefStruct
+    internal struct IntGridLayerDefStruct : ILayerDefStruct
     {
         public string Type { get; set; }
         public float DisplayOpacity { get; set; }

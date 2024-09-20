@@ -3,8 +3,9 @@ using Newtonsoft.Json;
 
 namespace HarvestHollow
 {
-    public static class ProjectSettings
+    internal class ProjectSettings
     {
+        protected ProjectSettings() { }
         // Access project data.
         private static readonly string _jsonText = File.ReadAllText("./Settings.json");
         private static readonly JsonStructure _jsonData = JsonConvert.DeserializeObject<JsonStructure>(_jsonText);

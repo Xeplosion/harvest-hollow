@@ -34,10 +34,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ILGPU" Version="1.5.1" />
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0" />
-    <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.0" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.Content.Pipeline" Version="3.8.1.303" />
+    <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tiles\Schemas\Definitions\" />

@@ -9,7 +9,7 @@ namespace HarvestHollow.Tiles.Structures.Definitions
     internal interface ILayerDefStruct
     {
         protected string Type { get; set; }
-        protected float DisplayOpacity { get; set }
+        protected float DisplayOpacity { get; set; }
         protected string Identifier { get; set; }
         protected float ParralaxFactorX { get; set; }
         protected float ParralaxFactorY { get; set; }
