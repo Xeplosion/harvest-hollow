@@ -263,7 +263,7 @@ namespace HarvestHollow.Content
             _progressBarText = $"Loaded {_progress} / {_totalAssets} total assets.";
 
             // DEBUG MESSAGES:
-            if (!ProjectSettings.Developer) { return;  }
+            if (!ProjectSettings.Developer || !ProjectSettings.DetailedOutput) { return;  }
             Debug.WriteLine(
                 $"Loaded asset '{AssetPaths[section][_CurrentSectionProgress[section]]}'; " +
                 $"Current section progress {_CurrentSectionProgress[section]} / {_TotalAssetsPerSection[section]};"

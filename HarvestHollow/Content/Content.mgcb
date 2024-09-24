@@ -6186,12 +6186,6 @@
 /processorParam:TextureFormat=Color
 /build:Images/TileSheets/TileSheet_Shadows_16x16.png
 
-#begin Settings.json
-/importer:JsonContentImporter
-/processor:JsonContentProcessor
-/processorParam:ContentType=HarvestHollow.ProjectSettingsReader, HarvestHollow
-/build:Settings.json
-
 #begin Sound/OST/OST_101_Landscape.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
