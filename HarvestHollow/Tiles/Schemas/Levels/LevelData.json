@@ -1,0 +1,16 @@
+{
+    "namespace": "harvesthollow.levels",
+    "name": "LevelSchema",
+    "type": "record",
+    "doc": "This schema defines a level in Harvest Hollow.",
+    "fields": [
+        { "name": "id", "type": "string", "doc": "User defined unique identifier." }, 
+        { "name": "iid", "type": "string", "doc": "Unique instance identifier." },
+        { "name": "uid", "type": "int", "doc": "Unique int identifier." },
+        { "name": "worldDepth", "type": "int", "doc": "Depth of the level in the world." },
+        { "name": "worldX", "type": "int", "doc": "World X coordinate in pixels." },
+        { "name": "worldY", "type": "int", "doc": "World Y coordinate in pixels." },
+        { "name": "levelWidth", "type": "int", "doc": "The width of the level in pixels. "},
+        { "name": "levelHeight", "type": "int", "doc": "The height of the level in pixels." }
+    ]
+}

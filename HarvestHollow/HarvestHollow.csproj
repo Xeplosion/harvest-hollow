@@ -41,11 +41,11 @@
     <EmbeddedResource Include="Content\Icon.bmp" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Apache.Avro" Version="1.12.0" />
     <PackageReference Include="ILGPU" Version="1.5.1" />
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
     <PackageReference Include="MonoGame.Extended" Version="4.0.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tiles\Schemas\Definitions\" />
