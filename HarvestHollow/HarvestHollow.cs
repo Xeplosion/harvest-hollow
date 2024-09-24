@@ -37,8 +37,8 @@ namespace HarvestHollow
         {
             // Loads all non-graphical content.
             Console.WriteLine("Running initialization logic...");
-            ProjectSettingsStruct settings = Content.Load<ProjectSettingsStruct>("./Content/Settings");
-            ProjectSettings.CreateSettings(settings);
+
+            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
             // Initialize tile scrolling engine
             Tiles = new TileScroller(GraphicsDevice.DisplayMode.Width, GraphicsDevice.DisplayMode.Height);

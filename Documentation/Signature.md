@@ -14,4 +14,6 @@ A table showing how much time was spent on what.
 | September 18 | 2.0 hours  | Xeplosion | Added .editor config file to enforce conventions and refactored existing code.
 | Septembet 19 | 2.5 hours  | Xeplosion | Continued work on the level editor.
 | Spetmeber 19 | 3.5 hours  | Xeplosion | Fixed issues with content.mgcb looking for packages dependent on .Net 8.0 framework instead of 6.0.
+| September 20 | 2.75 hours | Xeplosion | Configured MonoGame.Extended.Content.Pipeline Json importer.
+| September 20 | 2.5 hours  | Xeplosion | Updated asset paths.
 | TOTAL        | 34.5 hours |           | <-- that's a lot of hours wasted!
