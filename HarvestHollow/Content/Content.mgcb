@@ -4266,6 +4266,30 @@
 /processorParam:TextureFormat=Color
 /build:Images/SpriteSheets/NPCs/SpriteSheet_npcWomanB_00.png
 
+#begin Images/SpriteSheets/SpriteSheet_ChatBubble.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/SpriteSheets/SpriteSheet_ChatBubble.png
+
+#begin Images/SpriteSheets/SpriteSheet_Emojis.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/SpriteSheets/SpriteSheet_Emojis.png
+
 #begin Images/TileSheets/Environment/AutumnForest/AutumnSheets/TileSheet_Autumn_16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -5382,6 +5406,66 @@
 /processorParam:TextureFormat=Color
 /build:Images/TileSheets/Exterior/FencesAndWalls/TileSheet_WroughtIronDoor_32x32.png
 
+#begin Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_01.png
+
+#begin Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x32.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x32.png
+
+#begin Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x48.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x48.png
+
+#begin Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_48x48.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_48x48.png
+
+#begin Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeepPortcullis.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeepPortcullis.png
+
 #begin Images/TileSheets/Exterior/IconicCastle/TileSheet_IconicCastle_16x16.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -5897,6 +5981,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Images/TileSheets/Interior/CastleInterior/TileSheet_CastleInteriors.png
+
+#begin Images/TileSheets/Interior/CastleInterior/TileSheet_FortifiedKeep_01.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Images/TileSheets/Interior/CastleInterior/TileSheet_FortifiedKeep_01.png
 
 #begin Images/TileSheets/Interior/GrandLibrary/TileSheet_EmptyBookshelveA_01.png
 /importer:TextureImporter

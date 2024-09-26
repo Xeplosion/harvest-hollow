@@ -674,7 +674,8 @@ namespace HarvestHollow.Content
                         ("SFX_FireAuraLoop", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireAuraLoop"),
                         ("SFX_FireAuraStart", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireAuraStart"),
                         ("SFX_FireBurst", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireBurst"),
-                        ("SFX_FireExplosion", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireExplosion"),                        ("SFX_FireHold", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireHold"),
+                        ("SFX_FireExplosion", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireExplosion"),                        
+                        ("SFX_FireHold", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireHold"),
                         ("SFX_FireShield", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireShield"),
                         ("SFX_FireThrow", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireThrow"),
                         ("SFX_FireTileEnd", "Sound/SFX/Characters/Player/Combat/Magic/Spells/Fire/SFX_FireTileEnd"),
@@ -1802,6 +1803,11 @@ namespace HarvestHollow.Content
                         ("SpriteSheet_LivestockPigB_02", "Images/SpriteSheets/AnimatedLivestock/Pig/SpriteSheet_LivestockPigB_02"),
                         ("SpriteSheet_LivestockPigB_03", "Images/SpriteSheets/AnimatedLivestock/Pig/SpriteSheet_LivestockPigB_03"),
                         ("SpriteSheet_LivestockPigB_04", "Images/SpriteSheets/AnimatedLivestock/Pig/SpriteSheet_LivestockPigB_04"),
+
+                        // MISC:
+                        ("SpriteSheet_Emojis", "Images/SpriteSheets/SpriteSheet_Emojis"),
+                        ("SpriteSheet_ChatBubble", "Image/SpriteSheets/SpriteSheet_ChatBubble")
+
                     }
                 },
                 {
@@ -2098,6 +2104,13 @@ namespace HarvestHollow.Content
 
                         // Iconic castle.
                         ("TileSheet_IconicCastle_16x16", "Images/TileSheets/Exterior/IconicCastle/TileSheet_IconicCastle_16x16"),
+
+                        // Fortified keep.
+                        ("TileSheet_FortifiedKeep_01", "Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_01"),
+                        ("TileSheet_FortifiedKeep_48x48", "Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_48x48"),
+                        ("TileSheet_FortifiedKeep_32x32", "Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x32"),
+                        ("TileSheet_FortifiedKeep_32x48", "Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeep_32x48"),
+                        ("TileSheet_FortifiedKeepPortcullis", "Images/TileSheets/Exterior/FortifiedKeep/TileSheet_FortifiedKeepPortcullis"),
 
                         // Half timber.
                         ("TileSheet_HalfTimber_16x16_01", "Images/TileSheets/Exterior/IconicHomestead/TileSheet_HalfTimber_16x16_01"),
