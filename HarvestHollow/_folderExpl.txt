@@ -1,0 +1,21 @@
+﻿Harvest Hollow:
+
+Components: reusable UI or game-play components that can be plugged into various places.
+Entities: Characters, items, interactive elements.
+GameCore: The main game loop, the game state, the game rules.
+Systems: High level game mechanics. Often coordinates interactions between entities. UI management.
+Utilities: Helper functions, math functions, etc. Non specific to one system.
+
+Level Editor:
+
+Properties: Auto generated project files. Resources and application settings.
+Activation: Logic to initialize and activate the editor.
+Assets: Editor specific resources.
+Contracts: Interfaces, enums and abstract classes that define the editor API.
+Helpers: Utility classes or functions specific to the level editor that handle common tasks.
+Models: Data structures that represent the level data.
+Services: Back-end services that provide functionality to the editor. IE. rendering, grid management, tile rule processing, loading and saving files.
+Strings: Text resources, error messages, support for multiple languages.
+Styles: UI styling files and resources for consistent appearance.
+ViewModels: Logic that connects UI elements to the underlying models.
+Views: UI elements and windows.+

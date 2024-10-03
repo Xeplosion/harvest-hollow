@@ -1,0 +1,122 @@
+﻿{
+  "namespace": "HarvestHollow.Entities.LevelData",
+  "name": "WorldSchema",
+  "type": "record",
+  "doc": "Defines a world in Harvest Hollow.",
+  "fields": [
+    {
+      "name": "identifier",
+      "type": "string",
+      "doc": "User created unique identifier for the world.",
+      "aliases": [ "Identifier" ]
+    },
+    {
+      "name": "iid",
+      "type": "string",
+      "logicalType": "UUID",
+      "doc": "Unique instance identifier for the world.",
+      "aliases": [ "IID" ]
+    },
+    {
+      "name": "worldWidth",
+      "type": "int",
+      "doc": "Width of the world in pixels.",
+      "default": 0,
+      "aliases": [ "WorldWidth" ]
+    },
+    {
+      "name": "worldHeight",
+      "type": "int",
+      "doc": "Height of the world in pixels.",
+      "default": 0,
+      "aliases": [ "WorldHeight" ]
+    },
+    {
+      "name": "levels",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string",
+          "logicalType": "UUID"
+        }
+      ],
+      "doc": "References to level IIDs associated with this world.",
+      "aliases": [ "Levels" ]
+    },
+    {
+      "name": "definitions",
+      "doc": "A record of arrays containing object definition UIDs associated with this world.",
+      "aliases": [ "Definitions" ],
+      "type": [
+        {
+          "name": "Definitions",
+          "type": "record",
+          "doc": "A UID referencing an object definition.",
+          "fields": [
+            {
+              "name": "entityDefUids",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": "int"
+                }
+              ],
+              "doc": "An array with all entity definition UIDs associated with this world.",
+              "aliases": [ "EntityDefUIDs" ]
+            },
+            {
+              "name": "enumDefUids",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": "int"
+                }
+              ],
+              "doc": "An array with all enum definition UIDs associated with this world.",
+              "aliases": [ "EnumDefUIDs" ]
+            },
+            {
+              "name": "externalEnumDefUids",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": "int"
+                }
+              ],
+              "doc": "Same as a regular enum, but with a reference to an external source file.",
+              "aliases": [ "ExternalEnumDefUIDs" ]
+            },
+            {
+              "name": "layerDefUids",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": "int"
+                }
+              ],
+              "doc": "An array with all layer definition UIDs associated with this world.",
+              "aliases": [ "LayerDefUIDs" ]
+            },
+            {
+              "name": "tilesetDefUids",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": "int"
+                }
+              ],
+              "doc": "An array with all entity definition UIDs associated with this world.",
+              "aliases": [ "TilesetDefUIDs" ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

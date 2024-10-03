@@ -1,0 +1,32 @@
+Here's a quick guide to help explain the chick animations.
+
+The chick cell size is 16x16 (8 cells horizontally and vertically).
+The first row contains the basic chick animations.
+The second row is an eggshell-on-head variant of the same animations (just for fun).
+The third row contains some egg hatching stuff.
+
+
+Row 1 and 2:
+	The 1st frame is your basic idle frame, facing down.
+	Loop that with the 2nd frame for a hopping animation, which you can use for movement.
+
+	The 3rd frame is the same basic idle as frame 1, but facing up.
+	Loop it with the 4th frame for an upward facing hop/move.
+
+	Loop frames 5 and 6 for a "cheep cheep" sort of thing.
+
+	Frame 7 is a resting frame (sitting).
+
+	Frame 8 is an alternate "cheep cheep", or maybe a talking frame?
+	Everything is optional, folks!
+
+Row 3:
+	Ping-pong frames 1, 2, and 3 for a rocking egg shell, before it hatches.
+	Frames 4 and 5 are the egg cracking before the chick emerges.
+	Frames 6 and 7 are the "cheep cheep" frames, but this time from within the eggshell.
+	Frame 8 is the empty shell.
+
+These are just suggestions, you can use the animations however you want!
+
+Thanks,
+Seliel the Shaper

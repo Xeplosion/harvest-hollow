@@ -1,0 +1,464 @@
+﻿{
+  "namespace": "HarvestHollow.Entities.LevelData",
+  "name": "LevelSchema",
+  "type": "record",
+  "doc": "Defines a level in Harvest Hollow.",
+  "fields": [
+    {
+      "name": "identifier",
+      "type": "string",
+      "doc": "User created unique identifier for the level.",
+      "aliases": [ "Identifier" ]
+    },
+    {
+      "name": "iid",
+      "type": "string",
+      "logicalType":  "UUID",
+      "doc": "Unique instance identifier for the level.",
+      "aliases": [ "IID" ]
+    },
+    {
+      "name": "worldIid",
+      "type": "string",
+      "logicalType": "UUID",
+      "doc": "Reference to world IID containing this level.",
+      "aliases": [ "WorldIID" ]
+    },
+    {
+      "name": "neighbors",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": "string"
+        }
+      ],
+      "doc": "An array listing all levels touching this one.",
+      "aliases": [ "Neighbors" ]
+    },
+    {
+      "name": "bgColor",
+      "type": "string",
+      "doc": "Background color of the level in hex format.",
+      "aliases": [ "BgColor" ]
+    },
+    {
+      "name": "bgImage",
+      "type": [ "null", "string" ],
+      "doc": "Reference to the levels background image.",
+      "aliases": [ "BgImage" ]
+    },
+    {
+      "name": "bgPos",
+      "doc": "Render settings for the level's background image.",
+      "type": [
+        "null",
+        {
+          "name": "BackgroundImage",
+          "type": "record",
+          "doc": "Background image values for current level.",
+          "fields": [
+            {
+              "name": "cropRect",
+              "type": {
+                "type": "array",
+                "items": "int"
+              },
+              "doc": "Values to crop the background image. [cropX, cropY, cropWidth, cropHeight]",
+              "aliases": [ "CropRect" ]
+            },
+            {
+              "name": "scale",
+              "type": {
+                "type": "array",
+                "items": "float"
+              },
+              "doc": "Scale values of cropped background image. [scaleX, scaleY]",
+              "aliases": [ "Scale" ]
+            },
+            {
+              "name": "topLeft",
+              "type": {
+                "type": "array",
+                "items": "int"
+              },
+              "doc": "Pixel position of top left corner of background image relative to the level origin. [x, y]",
+              "aliases": [ "TopLeft" ]
+            }
+          ]
+        }
+      ],
+      "aliases": [ "BgPos" ]
+    },
+
+    {
+      "name": "worldDepth",
+      "type": "int",
+      "default": 0,
+      "doc": "Depth of the level in the world.",
+      "aliases": [ "WorldDepth" ]
+    },
+    {
+      "name": "worldX",
+      "type": "int",
+      "doc": "World X coordinate in pixels.",
+      "aliases": [ "WorldX" ]
+    },
+    {
+      "name": "worldY",
+      "type": "int",
+      "doc": "World Y coordinate in pixels.",
+      "aliases": [ "WorldY" ]
+    },
+    {
+      "name": "levelWidth",
+      "type": "int",
+      "doc": "Width of the level in pixels.",
+      "aliases": [ "LevelWidth" ]
+    },
+    {
+      "name": "levelHeight",
+      "type": "int",
+      "doc": "Height of the level in pixels.",
+      "aliases": [ "LevelHeight" ]
+    },
+    {
+      "name": "layerInstances",
+      "aliases": [ "LayerInstances" ],
+      "doc": "Data for each layer in the level.",
+      "type": {
+        "type": "array",
+        "items": {
+          "name": "LayerInstance",
+          "type": "record",
+          "doc": "Defines a level later instance.",
+          "fields": [
+            {
+              "name": "zIndex",
+              "type": "int",
+              "doc": "World Z depth / draw order value of the layer.",
+              "aliases": [ "ZIndex" ]
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "doc": "Layer type.",
+              "aliases": [ "Type" ]
+            },
+            {
+              "name": "autoLayerDefUid",
+              "type": [ "null", "int" ],
+              "doc": "Reference to the auto layer definition.",
+              "aliases": [ "AutoLayerDefUID" ]
+            },
+            {
+              "name": "IntGridDefUID",
+              "type": [ "null", "int" ],
+              "doc": "Reference to the int grid layer definition.",
+              "aliases": [ "IntGridLayerDefUID" ]
+            },
+            {
+              "name": "tilesetLayerDefUid",
+              "type": [ "null", "int" ],
+              "doc": "Reference to the tileset layer definition.",
+              "aliases": [ "TilesetLayerDefUID" ]
+            },
+            {
+              "name": "iid",
+              "type": "string",
+              "logicalType": "UUID",
+              "doc": "Unique instance identifier for the layer.",
+              "aliases": [ "IID" ]
+            },
+            {
+              "name": "pxOffsetX",
+              "type": "int",
+              "doc": "X offset of the layer in pixels.",
+              "aliases": [ "PxOffsetX" ]
+            },
+            {
+              "name": "pxOffsetY",
+              "type": "int",
+              "doc": "Y offset of the layer in pixels.",
+              "aliases": [ "PxOffsetY" ]
+            },
+            {
+              "name": "opacity",
+              "type": "float",
+              "doc": "Opacity of the layer.",
+              "aliases": [ "Opacity" ]
+            },
+            {
+              "name": "visible",
+              "type": "boolean",
+              "doc": "Whether or not the level is visible in the editor.",
+              "aliases": [ "Visible" ],
+              "default": true
+            },
+            {
+              "name": "tilesetUid",
+              "type": "int",
+              "doc": "Reference to the tileset uid used by this layer.",
+              "aliases": [ "TilesetUID" ]
+            },
+            {
+              "name": "tileSizeX",
+              "type": "int",
+              "doc": "Width of tiles in the layer.",
+              "aliases": [ "TileSizeX" ]
+            },
+            {
+              "name": "tileSizeY",
+              "type": "int",
+              "doc": "Height of tiles in the layer.",
+              "aliases": [ "TileSizeY" ]
+            },
+            {
+              "name": "gridWidth",
+              "type": "int",
+              "doc": "Grid based width of the layer.",
+              "aliases": [ "GridWidth" ]
+            },
+            {
+              "name": "gridHeight",
+              "type": "int",
+              "doc": "Grid based height of the layer.",
+              "aliases": [ "GridHeight" ]
+            },
+            {
+              "name": "intGridData",
+              "aliases": [ "IntGridData" ],
+              "doc": "IntGrid layer data for current level.",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": {
+                    "name": "IntGridData",
+                    "type": "record",
+                    "doc": "IntGrid data values for this layer.",
+                    "fields": [
+                      {
+                        "name": "identifier",
+                        "type": "string",
+                        "doc": "User created unique identifier for the int grid layer.",
+                        "aliases": [ "Identifier" ]
+                      },
+                      {
+                        "name": "defUid",
+                        "type": "int",
+                        "doc": "Reference to an integer grid layer definition.",
+                        "aliases": [ "defUID" ]
+                      },
+                      {
+                        "name": "v",
+                        "type": "int",
+                        "doc": "Value of the int grid cell.",
+                        "aliases": [ "V" ]
+                      },
+                      {
+                        "name": "px",
+                        "type": {
+                          "type": "array",
+                          "items": "int"
+                        },
+                        "doc": "Position of the grid cell in the layer. [x, y]",
+                        "aliases": [ "Px" ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "name": "tileData",
+              "aliases": [ "TileData" ],
+              "doc": "Tile layer data for current level.",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": {
+                    "name": "TileData",
+                    "type": "record",
+                    "doc": "Tile data for current layer.",
+                    "fields": [
+                      {
+                        "name": "a",
+                        "type": "float",
+                        "doc": "Opacity of the tile.",
+                        "aliases": [ "A" ]
+                      },
+                      {
+                        "name": "f",
+                        "type": "int",
+                        "doc": "Flip flag. f=0 (no flip), f=1 (x flip only), f=2(Y flip only), f=3 (both flips)",
+                        "aliases": [ "F" ],
+                        "default": 0
+                      },
+                      {
+                        "name": "pxPos",
+                        "type": {
+                          "type": "array",
+                          "items": "int"
+                        },
+                        "doc": "Position of the tile in the layer. [x, y]",
+                        "aliases": [ "PxPos" ]
+                      },
+                      {
+                        "name": "src",
+                        "type": "string",
+                        "doc": "Position of tile in the source tileset. [x, y]",
+                        "aliases": [ "Src" ]
+                      },
+                      {
+                        "name": "t",
+                        "type": "int",
+                        "doc": "Tile ID in tileset. (y * gridWidth + x)",
+                        "aliases": [ "T" ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "entityInstances",
+      "aliases": [ "EntityInstances" ],
+      "doc": "Entity data for the current level",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "EntityInstance",
+            "doc": "Data for an entity instance.",
+            "type": "record",
+            "fields": [
+              {
+                "name": "identifier",
+                "type": "string",
+                "doc": "User created unique identifier for the entity.",
+                "aliases": [ "Identifier" ]
+              },
+              {
+                "name": "iid",
+                "type": "string",
+                "logicalType": "UUID",
+                "doc": "Unique instance identifier for the entity.",
+                "aliases": [ "IID" ]
+              },
+              {
+                "name": "defUid",
+                "type": "int",
+                "doc": "Reference to the entity definition.",
+                "aliases": [ "DefUID" ]
+              },
+              {
+                "name": "worldX",
+                "type": "int",
+                "doc": "World X coordinate of the entity in pixels.",
+                "aliases": [ "WorldX" ]
+              },
+              {
+                "name": "worldY",
+                "type": "int",
+                "doc": "World Y coordinate of the entity in pixels.",
+                "aliases": [ "WorldY" ]
+              },
+              {
+                "name": "pxPos",
+                "type": {
+                  "type": "array",
+                  "items": "int"
+                },
+                "doc": "Position of the entity in the layer. [x, y]",
+                "aliases": [ "PxPos" ]
+              },
+              {
+                "name": "pivot",
+                "type": {
+                  "type": "array",
+                  "items": "float"
+                },
+                "doc": "Array of floats from 0-1 for entities pivot. [pivotX, pivotY]",
+                "aliases": [ "Pivot" ],
+                "default": [ 0.5, 0.5 ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "enumValues",
+      "doc": "Enum values for the current layer.",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "EnumValue",
+            "type": "record",
+            "doc": "Data for an enum used by this level.",
+            "fields": [
+              {
+                "name": "type",
+                "aliases": [ "Type" ],
+                "doc": "The type of this enum value. ['STRING', 'INT', 'FLOAT', 'BOOL', 'MULTI_LINE', 'COLOR', 'ENUM', 'FILE', 'TILE', 'ENTITY', 'POINT']",
+                "default": "STRING",
+                "type": {
+                  "name": "EnumValueType",
+                  "doc": "List of the enum value types.",
+                  "type": "enum",
+                  "symbols": [ "STRING", "INT", "FLOAT", "BOOL", "MULTI_LINE", "COLOR", "ENUM", "FILE", "TILE", "ENTITY", "POINT" ]
+                }
+              },
+              {
+                "name": "identifier",
+                "type": "string",
+                "doc": "User created unique identifier for this enum.",
+                "aliases": [ "Identifier" ]
+              },
+              {
+                "name": "uid",
+                "type": "int",
+                "doc": "Unique identifier for this enum.",
+                "aliases": [ "UID" ]
+              },
+              {
+                "name": "documentation",
+                "type": [ "null", "string" ],
+                "doc": "User created documentation for this enum.",
+                "aliases": [ "Documentation" ]
+              },
+              {
+                "name": "enumDefUid",
+                "type": [ "null", "int" ],
+                "doc": "Reference to enum used when type='ENUM'.",
+                "aliases": [ "EnumDefUID" ]
+              },
+              {
+                "name": "defaultValue",
+                "type": [ "null", "string" ],
+                "doc": "The default value assigned to the enum.",
+                "aliases": [ "Default" ]
+              },
+              {
+                "name": "displayInEditor",
+                "type": "boolean",
+                "doc": "Whether or not the enum is visible in the editor.",
+                "aliases": [ "DisplayInEditor" ],
+                "default": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

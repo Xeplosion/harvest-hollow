@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "HarvestHollow.LevelEditor (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "HarvestHollow.LevelEditor (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
