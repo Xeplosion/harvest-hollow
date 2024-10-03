@@ -24,10 +24,16 @@
   <PropertyGroup>
 	<MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
   </PropertyGroup>
+  <PropertyGroup>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
   <ItemGroup>
     <Compile Remove="pipeline-references\**" />
+    <Compile Remove="Views\**" />
     <EmbeddedResource Remove="pipeline-references\**" />
+    <EmbeddedResource Remove="Views\**" />
     <None Remove="pipeline-references\**" />
+    <None Remove="Views\**" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Content\Icon.ico" />
@@ -48,13 +54,6 @@
     <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Tiles\Schemas\Definitions\" />
-    <Folder Include="Tiles\Structures\Levels\" />
-    <Folder Include="Tiles\World\Backups\" />
-    <Folder Include="Tiles\World\Layers\" />
-    <Folder Include="Tiles\World\Levels\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="..\LICENSE.txt">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
@@ -63,6 +62,10 @@
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Components\" />
+    <Folder Include="bin\" />
   </ItemGroup>
   <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
     <Message Text="Restoring dotnet tools" Importance="High" />

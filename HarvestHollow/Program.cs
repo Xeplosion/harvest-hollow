@@ -1,16 +1,13 @@
 ﻿using System;
 
-namespace HarvestHollow
+namespace HarvestHollow;
+
+public static class Program
 {
-    public static class Program
+    [STAThread]
+    private static void Main()
     {
-        [STAThread]
-        static void Main()
-        {
-            using HarvestHollow game = new HarvestHollow();
-            game.Run();
-        }
+        using GameCore.HarvestHollow game = new();
+        game.Run();
     }
 }
-
-
