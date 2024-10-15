@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace HarvestHollow.LevelEditor.Views.MonoGameControls;
+
+public class MonoGameServiceProvider : IServiceProvider
+{
+    private readonly Dictionary<Type, object> _services;
+
+    public MonoGameServiceProvider()
+    {
+        _services = new Dictionary<Type, object>();
+    }
+
+    public void AddService(Type type, object provider)
+    {
+        _services.Add(type, provider);
+    }
+
+    public void AddService<T>(T service) where T : notnull
+    {
+        AddService(typeof(T), service);
+    }
+
+    public object? GetService(Type type)
+    {
+        if (_services.TryGetValue(type, out var service))
+            return service;
+
+        return null;
+    }
+
+    public T GetService<T>() where T : class
+    {
+        var service = GetService(typeof(T));
+        return (T) service!;
+    }
+
+    public void RemoveService(Type type)
+    {
+        _services.Remove(type);
+    }
+}

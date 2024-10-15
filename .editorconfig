@@ -197,6 +197,10 @@ dotnet_naming_rule.interface_should_be_begins_with_i.severity = error
 dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
 dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
 
+dotnet_naming_rule.private_static_method_should_be_begins_with_s_lower.severity = error
+dotnet_naming_rule.private_static_method_should_be_begins_with_s_lower.symbols = private_static_method
+dotnet_naming_rule.private_static_method_should_be_begins_with_s_lower.style = begins_with_s_lower
+
 dotnet_naming_rule.private_method_should_be_camel_case.severity = error
 dotnet_naming_rule.private_method_should_be_camel_case.symbols = private_method
 dotnet_naming_rule.private_method_should_be_camel_case.style = camel_case
@@ -221,6 +225,10 @@ dotnet_naming_rule.parameter_should_be_camel_case.severity = error
 dotnet_naming_rule.parameter_should_be_camel_case.symbols = parameter
 dotnet_naming_rule.parameter_should_be_camel_case.style = camel_case
 
+dotnet_naming_rule.type_parameter_should_be_begins_with_t.severity = error
+dotnet_naming_rule.type_parameter_should_be_begins_with_t.symbols = type_parameter
+dotnet_naming_rule.type_parameter_should_be_begins_with_t.style = begins_with_t
+
 # Symbol specifications
 
 dotnet_naming_symbols.interface.applicable_kinds = interface
@@ -243,6 +251,10 @@ dotnet_naming_symbols.private_or_internal_field.applicable_kinds = field
 dotnet_naming_symbols.private_or_internal_field.applicable_accessibilities = internal, private, private_protected
 dotnet_naming_symbols.private_or_internal_field.required_modifiers = 
 
+dotnet_naming_symbols.type_parameter.applicable_kinds = type_parameter
+dotnet_naming_symbols.type_parameter.applicable_accessibilities = *
+dotnet_naming_symbols.type_parameter.required_modifiers = 
+
 dotnet_naming_symbols.cesd.applicable_kinds = class, struct, enum, delegate
 dotnet_naming_symbols.cesd.applicable_accessibilities = *
 dotnet_naming_symbols.cesd.required_modifiers = 
@@ -250,6 +262,10 @@ dotnet_naming_symbols.cesd.required_modifiers =
 dotnet_naming_symbols.parameter.applicable_kinds = parameter
 dotnet_naming_symbols.parameter.applicable_accessibilities = *
 dotnet_naming_symbols.parameter.required_modifiers = 
+
+dotnet_naming_symbols.private_static_method.applicable_kinds = method
+dotnet_naming_symbols.private_static_method.applicable_accessibilities = private
+dotnet_naming_symbols.private_static_method.required_modifiers = static
 
 # Naming styles
 
@@ -277,3 +293,13 @@ dotnet_naming_style.begins_with__.required_prefix = _
 dotnet_naming_style.begins_with__.required_suffix = 
 dotnet_naming_style.begins_with__.word_separator = 
 dotnet_naming_style.begins_with__.capitalization = camel_case
+
+dotnet_naming_style.begins_with_t.required_prefix = T
+dotnet_naming_style.begins_with_t.required_suffix = 
+dotnet_naming_style.begins_with_t.word_separator = 
+dotnet_naming_style.begins_with_t.capitalization = pascal_case
+
+dotnet_naming_style.begins_with_s_lower.required_prefix = s_
+dotnet_naming_style.begins_with_s_lower.required_suffix = 
+dotnet_naming_style.begins_with_s_lower.word_separator = 
+dotnet_naming_style.begins_with_s_lower.capitalization = camel_case

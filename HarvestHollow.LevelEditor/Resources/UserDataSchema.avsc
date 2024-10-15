@@ -1,0 +1,232 @@
+﻿{
+  "namespace": "HarvestHollow.LevelEditor.Resources",
+  "name": "UserDataScehma",
+  "type": "record",
+  "doc": "Contains user specific application settings and data.",
+  "aliases": [ "UserDataStruct" ],
+  "fields": [
+    {
+      "name": "menuShortcuts",
+      "doc": "User specific menu shortcuts.",
+      "type": [
+        {
+          "name": "Shortcuts",
+          "type": "record",
+          "doc": "Menu shortcuts and their corresponding commands.",
+          "fields": [
+            {
+              "name": "openLevelOrWorldCommand",
+              "doc": "Command to open a level or world.",
+              "type": "string",
+              "default": "Ctrl+O",
+              "aliases": [ "OpenLevelorWorldCommand" ]
+            },
+            {
+              "name": "OpenLevelInWorldCommand",
+              "doc": "Command to open a level in the world.",
+              "type": "string",
+              "default": "Ctrl+Shift+O",
+              "aliases": [ "OpenLevelInWorldCommand" ]
+            },
+            {
+              "name": "SaveCommand",
+              "doc": "Command to save the current level or world.",
+              "type": "string",
+              "default": "Ctrl+S",
+              "aliases": [ "SaveCommand" ]
+            },
+            {
+              "name": "SaveAsCommand",
+              "doc": "Command to save the current level or world as a new file.",
+              "type": "string",
+              "default": "Ctrl+Shift+S",
+              "aliases": [ "SaveAsCommand" ]
+            },
+            {
+              "name": "ExportCommand",
+              "doc": "Command to export the current level or world.",
+              "type": "string",
+              "default": "Ctrl+E",
+              "aliases": [ "ExportCommand" ]
+            },
+            {
+              "name": "ExportAsCommand",
+              "doc": "Command to export the current level or world as a new file.",
+              "type": "string",
+              "default": "Ctrl+Shift+E",
+              "aliases": [ "ExportAsCommand" ]
+            },
+            {
+              "name": "ReloadCommand",
+              "doc": "Command to reload the current level or world.",
+              "type": "string",
+              "default": "Ctrl+R",
+              "aliases": [ "ReloadCommand" ]
+            },
+            {
+              "name": "RunCommandsCommand",
+              "doc": "Command to run the commands in the current level or world.",
+              "type": "string",
+              "default": "Ctrl+Shift+R",
+              "aliases": [ "RunCommandsCommand" ]
+            },
+            {
+              "name": "CloseCommand",
+              "doc": "Command to close the current level or world.",
+              "type": "string",
+              "default": "Ctrl+W",
+              "aliases": [ "CloseCommand" ]
+            },
+            {
+              "name": "CloseAllCommand",
+              "doc": "Command to close all levels or worlds.",
+              "type": "string",
+              "default": "Ctrl+Shift+W",
+              "aliases": [ "CloseAllCommand" ]
+            },
+            {
+              "name": "QuitCommand",
+              "doc": "Command to quit the application.",
+              "type": "string",
+              "default": "Ctrl+Q",
+              "aliases": [ "QuitCommand" ]
+            },
+            {
+              "name": "UndoCommand",
+              "doc": "Command to undo the last action.",
+              "type": "string",
+              "default": "Ctrl+Z",
+              "aliases": [ "UndoCommand" ]
+            },
+            {
+              "name": "RedoCommand",
+              "doc": "Command to redo the last action.",
+              "type": "string",
+              "default": "Ctrl+Y",
+              "aliases": [ "RedoCommand" ]
+            },
+            {
+              "name": "CutCommand",
+              "doc": "Command to cut the selected objects.",
+              "type": "string",
+              "default": "Ctrl+X",
+              "aliases": [ "CutCommand" ]
+            },
+            {
+              "name": "CopyCommand",
+              "doc": "Command to copy the selected objects.",
+              "type": "string",
+              "default": "Ctrl+C",
+              "aliases": [ "CopyCommand" ]
+            },
+            {
+              "name": "PasteCommand",
+              "doc": "Command to paste the copied objects.",
+              "type": "string",
+              "default": "Ctrl+V",
+              "aliases": [ "PasteCommand" ]
+            },
+            {
+              "name": "DeleteCommand",
+              "doc": "Command to delete the selected objects.",
+              "type": "string",
+              "default": "Delete",
+              "aliases": [ "DeleteCommand" ]
+            },
+            {
+              "name": "SelectAllCommand",
+              "doc": "Command to select all objects.",
+              "type": "string",
+              "default": "Ctrl+A",
+              "aliases": [ "SelectAllCommand" ]
+            },
+            {
+              "name": "InvertSelectionCommand",
+              "doc": "Command to invert the selection of objects.",
+              "type": "string",
+              "default": "Ctrl+Shift+I",
+              "aliases": [ "InvertSelectionCommand" ]
+            },
+            {
+              "name": "DeselectAllCommand",
+              "doc": "Command to deselect all objects.",
+              "type": "string",
+              "default": "Ctrl+Shift+A",
+              "aliases": [ "DeselectAllCommand" ]
+            },
+            {
+              "name": "SearchActionsCommand",
+              "doc": "Command to search for actions.",
+              "type": "string",
+              "default": "Ctrl+Shift+F",
+              "aliases": [ "SearchActionsCommand" ]
+            },
+            {
+              "name": "EnableGridViewCommand",
+              "doc": "Command to enable the grid view.",
+              "type": "string",
+              "default": "G",
+              "aliases": [ "EnableGridViewCommand" ]
+            },
+            {
+              "name": "EnableTileAnimationsCommand",
+              "doc": "Command to enable tile animations.",
+              "type": "string",
+              "default": "A",
+              "aliases": [ "EnableTileAnimationsCommand" ]
+            },
+            {
+              "name": "HighlightCureentLayerViewCommand",
+              "doc": "Command to highlight the current layer view.",
+              "type": "string",
+              "default": "H",
+              "aliases": [ "HighlightCureentLayerViewCommand" ]
+            },
+            {
+              "name": "ZoomInCommand",
+              "doc": "Command to zoom in.",
+              "type": "string",
+              "default": "Ctrl++",
+              "aliases": [ "ZoomInCommand" ]
+            },
+            {
+              "name": "ZoomOutCommand",
+              "doc": "Command to zoom out.",
+              "type": "string",
+              "default": "Ctrl+-",
+              "aliases": [ "ZoomOutCommand" ]
+            },
+            {
+              "name": "ZoomResetCommand",
+              "doc": "Command to reset the zoom.",
+              "type": "string",
+              "default": "Ctrl+0",
+              "aliases": [ "ZoomResetCommand" ]
+            },
+            {
+              "name": "FullScreenCommand",
+              "doc": "Command to toggle full screen mode.",
+              "type": "string",
+              "default": "F11",
+              "aliases": [ "FullScreenCommand" ]
+            },
+            {
+              "name": "ClearViewCommand",
+              "doc": "Command to clear the view.",
+              "type": "string",
+              "default": "Tab",
+              "aliases": [ "ClearViewCommand" ]
+            },
+            {
+              "name": "HelpCommand",
+              "doc": "Command to open the help dialog.",
+              "type": "string",
+              "default": "Ctrl+H",
+              "aliases": [ "HelpCommand" ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

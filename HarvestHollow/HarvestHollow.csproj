@@ -1,74 +1,178 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
-    <RollForward>Major</RollForward>
-    <PublishReadyToRun>false</PublishReadyToRun>
-    <TieredCompilation>false</TieredCompilation>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>Content\Icon.ico</ApplicationIcon>
-    <Authors>"Xeplosion"</Authors>
-    <Company>Xeplosion Games Corp.</Company>
-    <PackageProjectUrl>https://xegames.online/harvest-hollow</PackageProjectUrl>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/Xeplosion/harvest-hollow</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>2D tile scroller; harvest moon clone; JRPG;</PackageTags>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-    <Copyright>Copytight Xeplosion Games Corp. 2024</Copyright>
-    <Description>Harvest Hollow is a 2D tile scrolling JRPG styled game.</Description>
-    <Title>Harvest Hollow</Title>
-  </PropertyGroup>
-  <PropertyGroup>
-	<MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
-  </PropertyGroup>
-  <PropertyGroup>
-	<Nullable>enable</Nullable>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="pipeline-references\**" />
-    <Compile Remove="Views\**" />
-    <EmbeddedResource Remove="pipeline-references\**" />
-    <EmbeddedResource Remove="Views\**" />
-    <None Remove="pipeline-references\**" />
-    <None Remove="Views\**" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Remove="Content\Icon.ico" />
-    <None Remove="Content\Icon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Content\Icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Content\Icon.ico" />
-    <EmbeddedResource Include="Content\Icon.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Apache.Avro" Version="1.12.0" />
-    <PackageReference Include="ILGPU" Version="1.5.1" />
-    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
-    <PackageReference Include="MonoGame.Extended" Version="4.0.0" />
-    <PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="bin\" />
-  </ItemGroup>
-  <Target Name="RestoreDotnetTools" BeforeTargets="Restore">
-    <Message Text="Restoring dotnet tools" Importance="High" />
-    <Exec Command="dotnet tool restore" />
-  </Target>
+﻿<Project DefaultTargets="Build" Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+		<ProductVersion>8.0.30703</ProductVersion>
+		<SchemaVersion>2.0</SchemaVersion>
+		<ProjectGuid>{783C8617-6662-40D1-978B-695927F62BA7}</ProjectGuid>
+		<OutputType>WinExe</OutputType>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<RootNamespace>HarvestHollow</RootNamespace>
+		<AssemblyName>HarvestHollow</AssemblyName>
+		<FileAlignment>512</FileAlignment>
+		<MonoGamePlatform>DesktopGL</MonoGamePlatform>
+		<TargetFramework>net8.0</TargetFramework>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+		<DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+		<DebugType>full</DebugType>
+		<PlatformTarget>x86</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<Prefer32Bit>false</Prefer32Bit>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+		<OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+		<DefineConstants>TRACE;LINUX</DefineConstants>
+		<Optimize>true</Optimize>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>x86</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<Prefer32Bit>false</Prefer32Bit>
+		<WarningLevel>4</WarningLevel>
+	</PropertyGroup>
+	<PropertyGroup>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<ApplicationIcon>Content\Icon.ico</ApplicationIcon>
+		<PackageProjectUrl>https://xegames.online/harvest-hollow</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Xeplosion/harvest-hollow</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>2D tile scroller; harvest moon clone; JRPG;</PackageTags>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	</PropertyGroup>
+	<PropertyGroup>
+		<MonoGameExtendedPipelineReferencePath>$(MSBuildThisFileDirectory)pipeline-references</MonoGameExtendedPipelineReferencePath>
+	</PropertyGroup>
+	<PropertyGroup>
+		<Nullable>enable</Nullable>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>D:\Projects\HarvestHollow\DevelopmentResources\HarvestHollowKey.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Remove="pipeline-references\**" />
+		<Compile Remove="Views\**" />
+		<EmbeddedResource Remove="pipeline-references\**" />
+		<EmbeddedResource Remove="Views\**" />
+		<None Remove="pipeline-references\**" />
+		<None Remove="Views\**" />
+	</ItemGroup>
+
+	<!-- Include the MonoGame content pipeline references and Steamworks.NET agnostic .dll -->
+	<ItemGroup>
+		<PackageReference Include="Apache.Avro" Version="1.12.0" />
+		<PackageReference Include="ILGPU" Version="1.5.1" />
+		<PackageReference Include="ilmerge" Version="3.0.41" />
+		<PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.1.303" />
+		<PackageReference Include="MonoGame.Extended" Version="4.0.0" />
+		<PackageReference Include="MonoGame.Framework.DesktopGl" Version="3.8.1.303" />
+	</ItemGroup>
+
+	<!-- Application icon -->
+	<ItemGroup>
+		<None Remove="Content\Icon.ico" />
+		<None Remove="Content\Icon.bmp" />
+		<EmbeddedResource Include="Content\Icon.ico">
+			<LogicalName>Icon.ico</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Content\Icon.bmp">
+			<LogicalName>Icon.bmp</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+
+	<!-- Assembly configuration specific Steamworks.NET API copies -->
+	<ItemGroup>
+		<MonoGameContentReference Include="Content\Content.mgcb" />
+		<None Include="app.manifest" />
+		<None Include="MonoGame.Framework.dll.config" />
+		<None Include="packages.config" />
+	</ItemGroup>
+
+	<!-- Includes for Steamworks.NET -->
+
+	<!-- Project unused includes -->
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="bin\" />
+	</ItemGroup>
+
+	<!-- Include the MonoGame content pipeline references -->
+	<Target Name="RestoreDotnetTools" BeforeTargets="Restore">
+		<Message Text="Restoring dotnet tools" Importance="High" />
+		<Exec Command="dotnet tool restore" />
+	</Target>
+
+	<ItemGroup>
+		<!-- Windows-x86 builds -->
+		<None Include="Steamworks.Net\Windows-x86\Steamworks.NET.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x86'" />
+		<None Include="Steamworks.Net\Windows-x86\steam_api.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x86'" />
+
+		<!-- Windows-x64 builds -->
+		<None Include="Steamworks.Net\Windows-x64\Steamworks.NET.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64'" />
+		<None Include="Steamworks.Net\Windows-x64\steam_api64.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64'" />
+
+		<!-- Linux-x64 builds -->
+		<None Include="Steamworks.Net\OSX-Linux-x64\Steamworks.NET.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'linux-x64'" />
+		<None Include="Steamworks.Net\OSX-Linux-x64\libsteam_api.so" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'linux-x64'" />
+
+		<!-- OSX-x64 builds -->
+		<None Include="Steamworks.Net\OSX-Linux-x64\Steamworks.NET.dll" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'osx-x64'" />
+		<None Include="Steamworks.Net\OSX-Linux-x64\steam_api.bundle\**" Condition="('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'osx-x64'" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="Steamworks.NET">
+	    <HintPath>Steamworks.Net\libs-x86\Windows\Steamworks.NET.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<!-- Copy only the necessary files based on the conditions above -->
+		<None Update="Steamworks.Net\Windows-x86\Steamworks.NET.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x86'</Condition>
+		</None>
+		<None Update="Steamworks.Net\Windows-x86\steam_api.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x86'</Condition>
+		</None>
+		<None Update="Steamworks.Net\Windows-x64\Steamworks.NET.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64'</Condition>
+		</None>
+		<None Update="Steamworks.Net\Windows-x64\steam_api64.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64'</Condition>
+		</None>
+		<None Update="Steamworks.Net\OSX-Linux-x64\Steamworks.NET.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'linux-x64'</Condition>
+		</None>
+		<None Update="Steamworks.Net\OSX-Linux-x64\libsteam_api.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'linux-x64'</Condition>
+		</None>
+		<None Update="Steamworks.Net\OSX-Linux-x64\Steamworks.NET.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'osx-x64'</Condition>
+		</None>
+		<None Update="Steamworks.Net\OSX-Linux-x64\steam_api.bundle\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Condition>('$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release') And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'osx-x64'</Condition>
+		</None>
+	</ItemGroup>
+	<Target Name="CopySteamworksFiles" AfterTargets="Build">
+		<ItemGroup>
+			<!-- Copy the steam_api.bundle directory and its contents -->
+			<BundleFiles Include="Steamworks.Net\OSX-Linux-x64\steam_api.bundle\**" Condition="'$(Configuration)' == 'Debug' Or '$(Configuration)' == 'Release' And '$(Platform)' == 'x64' And '$(TargetFramework)' == 'osx-x64'" />
+		</ItemGroup>
+		<Copy SourceFiles="@(BundleFiles)" DestinationFolder="$(OutputPath)steam_api.bundle" SkipUnchangedFiles="true" />
+	</Target>
 </Project>

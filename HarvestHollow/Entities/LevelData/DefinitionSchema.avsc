@@ -1,0 +1,951 @@
+﻿{
+  "namespace": "HarvestHollow.Entities.LevelData",
+  "name": "DefinitionsSchema",
+  "type": "record",
+  "doc": "Definitions for all entities, layers and values in Harvest Hollow.",
+  "aliases": [ "DefinitionsStruct" ],
+  "fields": [
+    {
+      "name": "enumDefinitions",
+      "doc": "All enum definitions.",
+      "aliases": [ "EnumDefinitions" ],
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "EnumDefinition",
+            "type": "record",
+            "doc": "Defines an enum definition.",
+            "fields": [
+              {
+                "name": "identifier",
+                "type": "string",
+                "doc": "User created unique identifier for the enum definition.",
+                "aliases": [ "Identifier" ]
+              },
+              {
+                "name": "uid",
+                "type": "int",
+                "doc": "Unique identifier for the enum definition.",
+                "aliases": [ "UID" ]
+              },
+              {
+                "name": "type",
+                "type": {
+                  "name": "EnumType",
+                  "type": "enum",
+                  "symbols": [ "INTERNAL", "EXTERNAL" ]
+                },
+                "doc": "Internal enums are defined in the schema, external enums are defined in a separate file.",
+                "aliases": [ "Type" ]
+              },
+              {
+                "name": "externalRelPath",
+                "type": [ "null", "string" ],
+                "doc": "Path to external file providing this enum.",
+                "aliases": [ "ExternalRelPath" ]
+              },
+              {
+                "name": "documentation",
+                "type": [ "null", "string" ],
+                "doc": "User created documentation.",
+                "aliases": [ "Documentation" ]
+              },
+              {
+                "name": "tags",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": "string"
+                  }
+                ],
+                "doc": "User defined tags to organize the tileset.",
+                "aliases": [ "Tags" ]
+              },
+              {
+                "name": "values",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": "string"
+                  }
+                ],
+                "doc": "All possible values for the enum.",
+                "aliases": [ "Values" ]
+              },
+              {
+                "name": "tilesetDefUid",
+                "type": [ "null", "int" ],
+                "doc": "Reference to tileset used for editor visual.",
+                "aliases": [ "TilesetDefUID" ]
+              }
+            ]
+          }
+        }
+      ]
+
+    },
+    {
+      "name": "entityDefinitions",
+      "doc": "All entity definitions.",
+      "aliases": [ "EntityDefinitions" ],
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "EntityDefinition",
+            "type": "record",
+            "doc": "Defines an entity.",
+            "fields": [
+              {
+                "name": "identifier",
+                "type": "string",
+                "doc": "User created unique identifier.",
+                "aliases": [ "Identifier" ]
+              },
+              {
+                "name": "uid",
+                "type": "int",
+                "doc": "Unique identifier.",
+                "aliases": [ "UUID" ]
+              },
+              {
+                "name": "documentation",
+                "type": [ "null", "string" ],
+                "doc": "User created documentation.",
+                "aliases": [ "Documentation" ]
+              },
+              {
+                "name": "tags",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": "string"
+                  }
+                ],
+                "doc": "User defined tags to organize the tileset.",
+                "aliases": [ "Tags" ]
+              },
+              {
+                "name": "pxSize",
+                "type": {
+                  "type": "array",
+                  "items": "int"
+                },
+                "doc": "Size  of the entity. [sizeX, sizeY]",
+                "aliases": [ "PxSize" ]
+              },
+              {
+                "name": "tilesetDefUid",
+                "type": [ "null", "int" ],
+                "doc": "Reference to tileset used for editor visual.",
+                "aliases": [ "TilesetDefUid" ]
+              },
+              {
+                "name": "editorVisualizerFit",
+                "doc": "Editor options for entity visualizer fit.",
+                "aliases": [ "EditorVisualizerFit" ],
+                "default": "COVER_BOUNDS",
+                "type": {
+                  "name": "EditorVisualizerFit",
+                  "type": "enum",
+                  "symbols": [
+                    "COVER_BOUNDS",
+                    "FIT_BOOUNDS",
+                    "REPEAT",
+                    "DIRTY_STRETCH_TO_BOUNDS",
+                    "FULL_SIZE_CROPPED",
+                    "FULL_SIZE"
+                  ]
+                }
+              },
+              {
+                "name": "visualizerOpacity",
+                "type": "float",
+                "default": 0.25,
+                "doc": "Editor entity tileset visualizer opacity.",
+                "aliases": [ "VisualizerOpacity" ]
+              },
+              {
+                "name": "fillOpacity",
+                "type": "float",
+                "default": 0.0,
+                "doc": "Editor entity fill color visualizer opacity.",
+                "aliases": [ "FillOpacity" ]
+              },
+              {
+                "name": "outlineOpacity",
+                "type": "float",
+                "default": 1.0,
+                "doc": "Editor entity outline visualizer opacity.",
+                "aliases": [ "OutlineOpacity" ]
+              },
+              {
+                "name": "pivot",
+                "type": {
+                  "type": "array",
+                  "items": "float"
+                },
+                "doc": "Array of floats from 0-1 for entities pivot. [pivotX, pivotY]",
+                "aliases": [ "Pivot" ],
+                "default": [ 0.5, 0.5 ]
+              },
+              {
+                "name": "maxCount",
+                "type": [ "null", "int" ],
+                "default": null,
+                "doc": "Maximum number of entities allowed in a given scope.",
+                "aliases": [ "MaxCount" ]
+              },
+              {
+                "name": "countScopeOptions",
+                "doc": "Option for scope at which entity count is enforced.",
+                "aliases": [ "CountScopeOptions" ],
+                "default": "PER_WORLD",
+                "type": {
+                  "name": "CountScopeOptions",
+                  "type": "enum",
+                  "symbols": [ "PER_lAYER", "PER_LEVEL", "PER_WORLD", "HARVEST_HOLLOW" ]
+                }
+              },
+              {
+                "name": "enforceCountOptions",
+                "type": {
+                  "name": "EnforceCountOptions",
+                  "type": "enum",
+                  "symbols": [ "DISCARD_OLD", "PREVENT_ADDING", "MOVE_OLD_TO_NEW" ],
+                  "doc": "Option for how to handle entity count enforcement."
+                },
+                "doc": "Option for how to handle entity count enforcement.",
+                "aliases": [ "EnforceCountOptions" ]
+              },
+              {
+                "name": "enumValues",
+                "doc": "All enum values for this entity.",
+                "aliases": [ "EnumValues" ],
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "name": "EnumValue",
+                    "type": "record",
+                    "doc": "Defines an enum value.",
+                    "fields": [
+                      {
+                        "name": "type",
+                        "doc": "The type of enum value associated with this entity.",
+                        "aliases": [ "Type" ],
+                        "default": "STRING",
+                        "type": {
+                          "name": "EnumValueType",
+                          "type": "enum",
+                          "symbols": [ "STRING", "INT", "FLOAT", "BOOL", "MULTI_LINE", "COLOR", "ENUM", "FILE", "TILE", "ENTITY", "POINT" ]
+                        }
+                      },
+                      {
+                        "name": "identifier",
+                        "type": "string",
+                        "doc": "User created unique identifier.",
+                        "aliases": [ "Identifier" ]
+                      },
+                      {
+                        "name": "uid",
+                        "type": "int",
+                        "doc": "Unique identifier.",
+                        "aliases": [ "UID" ]
+                      },
+                      {
+                        "name": "documentation",
+                        "type": [ "null", "string" ],
+                        "doc": "User created documentation.",
+                        "aliases": [ "Documentation" ]
+                      },
+                      {
+                        "name": "enumDefUid",
+                        "type": [ "null", "int" ],
+                        "doc": "Reference to enum used for assigning entities enum values.",
+                        "aliases": [ "EnumDefUID" ]
+                      },
+                      {
+                        "name": "defaultValue",
+                        "type": [ "null", "string" ],
+                        "doc": "The custom enum value assigned to the entity.",
+                        "aliases": [ "DefaultValue" ]
+                      },
+                      {
+                        "name": "displayInEditor",
+                        "type": "boolean",
+                        "doc": "Whether or not this enum value should be visible in the editor",
+                        "aliases": [ "DisplayInEditor" ],
+                        "default": true
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "layerDefinitions",
+      "doc": "All layer definitions.",
+      "aliases": [ "LayerDefinitions" ],
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "LayerDefinitions",
+            "type": "record",
+            "doc": "Defines a layer definition.",
+            "fields": [
+              {
+                "name": "intGridDefs",
+                "doc": "All IntGrid definitions.",
+                "aliases": [ "IntGridDefs" ],
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": {
+                      "name": "IntGridDef",
+                      "type": "record",
+                      "doc": "Defines an int grid def.",
+                      "fields": [
+                        {
+                          "name": "identifier",
+                          "type": "string",
+                          "doc": "User created unique identifier.",
+                          "aliases": [ "Identifier" ]
+                        },
+                        {
+                          "name": "uid",
+                          "type": "int",
+                          "doc": "Unique identifier.",
+                          "aliases": [ "UID" ]
+                        },
+                        {
+                          "name": "documentation",
+                          "type": [ "null", "string" ],
+                          "doc": "User created documentation.",
+                          "aliases": [ "Documentation" ]
+                        },
+                        {
+                          "name": "tags",
+                          "type": [
+                            "null",
+                            {
+                              "type": "array",
+                              "items": "string"
+                            }
+                          ],
+                          "doc": "User defined tags to organize the tileset.",
+                          "aliases": [ "Tags" ]
+                        },
+                        {
+                          "name": "gridSizeX",
+                          "type": "int",
+                          "doc": "Width of values.",
+                          "aliases": [ "GridSizeX" ],
+                          "default": 16
+                        },
+                        {
+                          "name": "gridSizeY",
+                          "type": "int",
+                          "doc": "Height of values.",
+                          "aliases": [ "GridSizeY" ],
+                          "default": 16
+                        },
+                        {
+                          "name": "intGridValues",
+                          "doc": "Values for int grid layer def.",
+                          "aliases": [ "IntGridValues" ],
+                          "type": [
+                            "null",
+                            {
+                              "type": "array",
+                              "items": {
+                                "name": "IntGridValue",
+                                "type": "record",
+                                "doc": "Defines an int grid value.",
+                                "fields": [
+                                  {
+                                    "name": "identifier",
+                                    "type": "string",
+                                    "doc": "User created unique identifier.",
+                                    "aliases": [ "Identifier" ]
+                                  },
+                                  {
+                                    "name": "groupUid",
+                                    "type": "int",
+                                    "default": 0,
+                                    "doc": "Group identifier.",
+                                    "aliases": [ "GroupUID" ]
+                                  },
+                                  {
+                                    "name": "value",
+                                    "type": "int",
+                                    "doc": "The IntGrid value itself.",
+                                    "aliases": [ "Value" ]
+                                  },
+                                  {
+                                    "name": "color",
+                                    "type": "string",
+                                    "doc": "Hex color.",
+                                    "aliases": [ "Color" ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "name": "intGridValueGroups",
+                          "doc": "All IntGrid value groups.",
+                          "aliases": [ "IntGridValueGroups" ],
+                          "type": [
+                            "null",
+                            {
+                              "type": "array",
+                              "items": {
+                                "name": "IntGridValueGroup",
+                                "type": "record",
+                                "doc": "Defines an int grid value group.",
+                                "fields": [
+                                  {
+                                    "name": "identifier",
+                                    "type": "string",
+                                    "doc": "User created unique identifier.",
+                                    "aliases": [ "Identifier" ]
+                                  },
+                                  {
+                                    "name": "uid",
+                                    "type": "int",
+                                    "doc": "Unique identifier.",
+                                    "aliases": [ "UID" ]
+                                  },
+                                  {
+                                    "name": "color",
+                                    "type": "string",
+                                    "doc": "Hex color.",
+                                    "aliases": [ "Color" ]
+                                  }
+                                ]
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "tilesetLayerDefs",
+                "doc": "All Tileset definitions.",
+                "aliases": [ "TilesetLayerDefs" ],
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": {
+                      "name": "TilesetLayerDef",
+                      "type": "record",
+                      "doc": "Defines a tileset layer.",
+                      "fields": [
+                        {
+                          "name": "identifier",
+                          "type": "string",
+                          "doc": "User created unique identifier.",
+                          "aliases": [ "Identifier" ]
+                        },
+                        {
+                          "name": "uid",
+                          "type": "int",
+                          "doc": "Unique identifier.",
+                          "aliases": [ "UID" ]
+                        },
+                        {
+                          "name": "tilesetDefUid",
+                          "type": [ "null", "int" ],
+                          "doc": "Reference to the tilesheet used by this layer.",
+                          "aliases": [ "TilesetDefUID" ]
+                        },
+                        {
+                          "name": "documentation",
+                          "type": [ "null", "string" ],
+                          "doc": "User created documentation.",
+                          "aliases": [ "Documentation" ]
+                        },
+                        {
+                          "name": "tags",
+                          "type": [
+                            "null",
+                            {
+                              "type": "array",
+                              "items": "string"
+                            }
+                          ],
+                          "doc": "User defined tags to organize the tileset.",
+                          "aliases": [ "Tags" ]
+                        },
+                        {
+                          "name": "tileSizeX",
+                          "type": "int",
+                          "doc": "Width of tiles.",
+                          "aliases": [ "TileSizeX" ],
+                          "default": 16
+                        },
+                        {
+                          "name": "tileSizeY",
+                          "type": "int",
+                          "doc": "Height of tiles.",
+                          "aliases": [ "TileSizeY" ],
+                          "default": 16
+                        },
+                        {
+                          "name": "pxOffsetX",
+                          "type": "int",
+                          "doc": "X offset in pixels.",
+                          "aliases": [ "PxOffsetX" ],
+                          "default": 8
+                        },
+                        {
+                          "name": "pxOffsetY",
+                          "type": "int",
+                          "doc": "Y offset in pixels.",
+                          "aliases": [ "PxOffsetY" ],
+                          "default": 8
+                        },
+                        {
+                          "name": "opacity",
+                          "type": "float",
+                          "doc": "Opacity of the layer.",
+                          "aliases": [ "Opacity" ],
+                          "default": 1.0
+                        },
+                        {
+                          "name": "hideInList",
+                          "type": "boolean",
+                          "doc": "Hide in list.",
+                          "aliases": [ "HideInList" ],
+                          "default": false
+                        },
+                        {
+                          "name": "showInWorldView",
+                          "type": "boolean",
+                          "doc": "Show in world view.",
+                          "aliases": [ "ShowInWorldView" ],
+                          "default": true
+                        },
+                        {
+                          "name": "pivot",
+                          "type": {
+                            "type": "array",
+                            "items": "float"
+                          },
+                          "doc": "Array of floats from 0-1 for entities pivot. [pivotX, pivotY]",
+                          "aliases": [ "Pivot" ],
+                          "default": [ 0.5, 0.5 ]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "autoLayerDefs",
+                "doc": "All AutoLayer definitions.",
+                "aliases": [ "AutoLayerDefs" ],
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "name": "AutoLayerDef",
+                    "type": "record",
+                    "doc": "Defines an auto layer.",
+                    "fields": [
+                      {
+                        "name": "identifier",
+                        "type": "string",
+                        "doc": "User created unique identifier.",
+                        "aliases": [ "Identifier" ]
+                      },
+                      {
+                        "name": "uid",
+                        "type": "int",
+                        "doc": "Unique identifier.",
+                        "aliases": [ "UID" ]
+                      },
+                      {
+                        "name": "documentation",
+                        "type": [ "null", "string" ],
+                        "doc": "User created documentation.",
+                        "aliases": [ "Documentation" ]
+                      },
+                      {
+                        "name": "tags",
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": "string"
+                          }
+                        ],
+                        "doc": "User defined tags to organize the tileset.",
+                        "aliases": [ "Tags" ]
+                      },
+                      {
+                        "name": "tileSizeX",
+                        "type": "int",
+                        "doc": "Width of tiles.",
+                        "aliases": [ "TileSizeX" ],
+                        "default": 16
+                      },
+                      {
+                        "name": "tileSizeY",
+                        "type": "int",
+                        "doc": "Height of tiles.",
+                        "aliases": [ "TileSizeY" ],
+                        "default": 16
+                      },
+                      {
+                        "name": "tilesetEnumDefUid",
+                        "doc": "Reference to the enum used for selecting the AutoLayer tileset.",
+                        "aliases": [ "TilesetEnumDefUID" ],
+                        "type": {
+                          "type": "array",
+                          "items": {
+                            "name": "AutoLayerTilesetSelect",
+                            "type": "record",
+                            "doc": "Auto tiles layers created using IntGrid data.",
+                            "fields": [
+                              {
+                                "name": "enumDefUid",
+                                "type": [ "null", "int" ],
+                                "doc": "Reference to the enum used for selecting the AutoLayer tileset.",
+                                "aliases": [ "EnumDefUID" ]
+                              },
+                              {
+                                "name": "defualtTilesetDefUid",
+                                "type": [ "null", "int" ],
+                                "doc": "Reference to the default tileset used for the AutoLayer.",
+                                "aliases": [ "DefaultTilesetDefUID" ]
+                              },
+                              {
+                                "name": "enumBasedTilesetDefUids",
+                                "doc": "List of enum values with their associated tilesets.",
+                                "aliases": [ "EnumBasedTilesetDefUIDs" ],
+                                "type": {
+                                  "type": "array",
+                                  "items": {
+                                    "name": "EnumBasedTilesetDefUID",
+                                    "type": "record",
+                                    "doc": "Enum value and tileset UID pair.",
+                                    "fields": [
+                                      {
+                                        "name": "enumValue",
+                                        "type": [ "null", "string" ],
+                                        "doc": "The enum value used to select the tileset.",
+                                        "aliases": [ "EnumValue" ]
+                                      },
+                                      {
+                                        "name": "tilesetDefUid",
+                                        "type": [ "null", "int" ],
+                                        "doc": "Reference to the tileset used for the AutoLayer.",
+                                        "aliases": [ "TilesetDefUID" ]
+                                      }
+                                    ]
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "name": "rules",
+                        "doc": "Rules for the AutoLayer.",
+                        "aliases": [ "Rules" ],
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "name": "Rules",
+                              "type": "record",
+                              "doc": "Rules for the AutoLayer. Rules are made up of arrays of int grid data value combinations corresponding to tile placements in the layer from a tileset dependent on certain level enum values.",
+                              "fields": [
+                                {
+                                  "name": "intGridRules",
+                                  "doc": "The int grid value combination making up a rule.",
+                                  "type": [
+                                    "null",
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "name": "IntGridRule",
+                                        "type": "record",
+                                        "doc": "IntGrid value rule.",
+                                        "fields": [
+                                          {
+                                            "name": "identifier",
+                                            "type": "string",
+                                            "doc": "User created unique identifier.",
+                                            "aliases": [ "Identifier" ]
+                                          },
+                                          {
+                                            "name": "defUid",
+                                            "type": "int",
+                                            "doc": "Reference to an integer grid layer definition.",
+                                            "aliases": [ "DefUID" ]
+                                          },
+                                          {
+                                            "name": "v",
+                                            "type": "int",
+                                            "doc": "Value of the grid cell.",
+                                            "aliases": [ "V" ]
+                                          },
+                                          {
+                                            "name": "px",
+                                            "type": {
+                                              "type": "array",
+                                              "items": "int"
+                                            },
+                                            "doc": "Pixel position of the grid cell in the layer. [x, y]",
+                                            "aliases": [ "PX" ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "name": "tileRules",
+                                  "doc": "Tile placement values selected using corresponding IntGrid rules and level enum values.",
+                                  "aliases": [ "TileRules" ],
+                                  "type": [
+                                    "null",
+                                    {
+                                      "type": "array",
+                                      "items": {
+                                        "name": "TileRule",
+                                        "type": "record",
+                                        "doc": "Tile data for current layer.",
+                                        "fields": [
+                                          {
+                                            "name": "a",
+                                            "type": "float",
+                                            "doc": "Opacity of the tile.",
+                                            "aliases": [ "A" ],
+                                            "default": 1.0
+                                          },
+                                          {
+                                            "name": "f",
+                                            "type": "int",
+                                            "doc": "Flip flag. f=0 (no flip), f=1 (x flip only), f=2(Y flip only), f=3 (both flips)",
+                                            "aliases": [ "F" ],
+                                            "default": 0
+                                          },
+                                          {
+                                            "name": "pxPos",
+                                            "type": {
+                                              "type": "array",
+                                              "items": "int"
+                                            },
+                                            "doc": "Position of the tile in the layer. [x, y]",
+                                            "aliases": [ "PXPos" ]
+                                          },
+                                          {
+                                            "name": "src",
+                                            "type": "string",
+                                            "doc": "Position of tile in the source tileset. [x, y]",
+                                            "aliases": [ "Src" ]
+                                          },
+                                          {
+                                            "name": "t",
+                                            "type": "int",
+                                            "doc": "Tile ID in tileset. (y * gridWidth + x)",
+                                            "aliases": [ "T" ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "tilesetDefinitions",
+      "doc": "All tileset definitions.",
+      "aliases": [ "TilesetDefinitions" ],
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "TilesetDefinition",
+            "type": "record",
+            "doc": "All tileset definitions.",
+            "fields": [
+              {
+                "name": "identifier",
+                "type": "string",
+                "doc": "User created unique identifier.",
+                "aliases": [ "Identifier" ]
+              },
+              {
+                "name": "uid",
+                "type": "int",
+                "doc": "Unique identifier.",
+                "aliases": [ "UID" ]
+              },
+              {
+                "name": "tileset",
+                "type": "string",
+                "doc": "The name of the tileset image.",
+                "aliases": [ "Tileset" ]
+              },
+              {
+                "name": "pxSize",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": "int"
+                  }
+                ],
+                "doc": "Size of the image in pixels.",
+                "aliases": [ "PxSize" ]
+              },
+              {
+                "name": "tags",
+                "type": [
+                  "null",
+                  {
+                    "type": "array",
+                    "items": "string"
+                  }
+                ],
+                "doc": "User defined tags to organize the tileset.",
+                "aliases": [ "Tags" ]
+              },
+              {
+                "name": "tileSizeX",
+                "type": "int",
+                "default": 16,
+                "doc": "Width of tiles.",
+                "aliases": [ "TileSizeX" ]
+              },
+              {
+                "name": "tileSizeY",
+                "type": "int",
+                "default": 16,
+                "doc": "Height of tiles.",
+                "aliases": [ "TileSizeY" ]
+              },
+              {
+                "name": "spacing",
+                "type": "int",
+                "default": 0,
+                "doc": "Spacing between tiles.",
+                "aliases": [ "Spacing" ]
+              },
+              {
+                "name": "padding",
+                "type": "int",
+                "default": 0,
+                "doc": "Distance around image borders.",
+                "aliases": [ "Padding" ]
+              },
+              {
+                "name": "gridWidth",
+                "type": [ "null", "int" ],
+                "doc": "Grid based width.",
+                "aliases": [ "GridWidth" ]
+              },
+              {
+                "name": "gridHeight",
+                "type": [ "null", "int" ],
+                "doc": "Grid based height.",
+                "aliases": [ "GridHeight" ]
+              },
+              {
+                "name": "tilesetEnums",
+                "doc": "All tileset enums.",
+                "aliases": [ "TilesetEnums" ],
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "name": "TilesetEnum",
+                    "doc": "Describes a tile layer enum.",
+                    "type": "record",
+                    "fields": [
+                      {
+                        "name": "enumDefUid",
+                        "type": [ "null", "int" ],
+                        "doc": "Reference to enum used for assigning tiles enum values.",
+                        "aliases": [ "EnumDefUID" ]
+                      },
+                      {
+                        "name": "tilesetEnumMarks",
+                        "doc": "A list with a tile enum marks.",
+                        "aliases": [ "TilesetEnumMarks" ],
+                        "type": [
+                          "null",
+                          {
+                            "type": "array",
+                            "items": {
+                              "name": "TilesetEnumMark",
+                              "doc": "Describes a tile enum mark.",
+                              "type": "record",
+                              "fields": [
+                                {
+                                  "name": "pxPos",
+                                  "type": {
+                                    "type": "array",
+                                    "items": "int"
+                                  },
+                                  "doc": "Position of the tile in the tileset.",
+                                  "aliases": [ "PxPos" ]
+                                },
+                                {
+                                  "name": "value",
+                                  "type": "string",
+                                  "defualt": "null",
+                                  "doc": "The custom enum value assigned to the tile.",
+                                  "aliases": [ "Value" ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

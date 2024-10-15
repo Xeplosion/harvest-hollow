@@ -1,0 +1,169 @@
+﻿<UserControl
+    x:Class="HarvestHollow.LevelEditor.Views.CustomControls.MenuControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HarvestHollow.LevelEditor.Views.CustomControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:HarvestHollow.LevelEditor.ViewModels"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+
+    <UserControl.DataContext>
+        <vm:MenuControlViewModel />
+    </UserControl.DataContext>
+
+    <Menu>
+        <!--  File menu  -->
+        <MenuItem Header="_File">
+            <MenuItem Header="_New">
+                <MenuItem Command="{Binding NewWorldCommand}" Header="_New World" />
+                <Separator />
+                <MenuItem Command="{Binding NewLevelCommand}" Header="New Level" />
+                <MenuItem Command="{Binding NewTilesetCommand}" Header="New Tileset" />
+            </MenuItem>
+            <MenuItem Command="{Binding OpenLevelOrWorldCommand}" Header="_Open Level or World..." />
+            <MenuItem Command="{Binding OpenLevelInWorldCommand}" Header="Open Level in _World..." />
+            <MenuItem Header="_Recent Levels" />
+            <MenuItem Header="_Recent Worlds" />
+            <Separator />
+            <MenuItem Command="{Binding SaveCommand}" Header="_Save" />
+            <MenuItem Command="{Binding SaveAsCommand}" Header="Save _As..." />
+            <MenuItem Command="{Binding SaveAllCommand}" Header="Save All" />
+            <MenuItem Command="{Binding ExportCommand}" Header="_Export" />
+            <MenuItem Command="{Binding ExportAsCommand}" Header="E_xport As..." />
+            <MenuItem Command="{Binding ExportAsImageCommand}" Header="Export As _Image..." />
+            <MenuItem Command="{Binding ReloadCommand}" Header="Reload" />
+            <Separator />
+            <MenuItem Header="Commands">
+                <MenuItem Command="{Binding EditCommandsCommand}" Header="Edit Commands..." />
+                <MenuItem Command="{Binding RunCommandsCommand}" Header="_Run Commands..." />
+            </MenuItem>
+            <Separator />
+            <MenuItem Command="{Binding CloseCommand}" Header="_Close" />
+            <MenuItem Command="{Binding CloseAllCommand}" Header="C_lose All" />
+            <MenuItem Command="{Binding CloseWorldCommand}" Header="_Close World" />
+            <MenuItem Command="{Binding QuitCommand}" Header="_Quit" />
+        </MenuItem>
+        <!--  Edit menu  -->
+        <MenuItem Header="_Edit">
+            <MenuItem Command="{Binding UndoCommand}" Header="_Undo" />
+            <MenuItem Command="{Binding RedoCommand}" Header="_Redo" />
+            <Separator />
+            <MenuItem Command="{Binding CutCommand}" Header="_Cut" />
+            <MenuItem Command="{Binding CopyCommand}" Header="_Copy" />
+            <MenuItem Command="{Binding PasteCommand}" Header="_Paste" />
+            <MenuItem Command="{Binding PasteInPlaceCommand}" Header="Paste _in Place" />
+            <MenuItem Command="{Binding DeleteCommand}" Header="_Delete" />
+            <Separator />
+            <MenuItem Command="{Binding SelectAllCommand}" Header="_Select All" />
+            <MenuItem Command="{Binding InvertSelectionCommand}" Header="Invert S_election" />
+            <MenuItem Command="{Binding SelectNoneCommand}" Header="Select _None" />
+            <Separator />
+            <MenuItem Command="{Binding PreferencesCommand}" Header="Preferences..." />
+        </MenuItem>
+        <!--  View menu  -->
+        <MenuItem Header="View">
+            <MenuItem Header="Views and Toolbars">
+                <MenuItem
+                    Command="{Binding EnableProjectViewVisibleCommand}"
+                    Header="Project"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsProjectViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableWorldViewVisibleCommand}"
+                    Header="World"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsWorldViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableLevelViewVisibleCommand}"
+                    Header="Editor"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsLevelViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableTilesetViewVisibleCommand}"
+                    Header="Tilesets"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsTilesetViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableEntitiesViewVisibleCommand}"
+                    Header="Entities"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsEntitiesViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableEnumerationsViewVisibleCommand}"
+                    Header="Enumerations"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsEnumerationsViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableLayerViewVisibleCommand}"
+                    Header="Layers"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsLayerViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableConsoleViewVisibleCommand}"
+                    Header="Console"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsConsoleViewVisible, Mode=TwoWay}" />
+                <MenuItem
+                    Command="{Binding EnableIssuesViewVisibleCommand}"
+                    Header="Issues"
+                    IsCheckable="True"
+                    IsChecked="{Binding IsIssuesViewVisible, Mode=TwoWay}" />
+            </MenuItem>
+            <MenuItem Command="{Binding SearchActionsCommand}" Header="Search Actions..." />
+            <Separator />
+            <MenuItem
+                Command="{Binding EnableGridViewCommand}"
+                Header="Show Grid"
+                IsCheckable="True"
+                IsChecked="{Binding EnableGridView, Mode=TwoWay}" />
+            <MenuItem
+                Command="{Binding EnableTileCoordinatesCommand}"
+                Header="Show Tile Coordinates"
+                IsCheckable="True"
+                IsChecked="{Binding EnableTileCoordinates, Mode=TwoWay}" />
+            <MenuItem
+                Command="{Binding EnableEntitiesViewCommand}"
+                Header="Show Entities"
+                IsCheckable="True"
+                IsChecked="{Binding EnableEntitiesView, Mode=TwoWay}" />
+            <MenuItem
+                Command="{Binding EnableTileAnimationsCommand}"
+                Header="Show Tile Animations"
+                IsCheckable="True"
+                IsChecked="{Binding EnableTileAnimations, Mode=TwoWay}" />
+            <MenuItem
+                Command="{Binding EnableTileCollisionsCommand}"
+                Header="Show Tile Collisions"
+                IsCheckable="True"
+                IsChecked="{Binding EnableTileCollisions, Mode=TwoWay}" />
+            <MenuItem
+                Command="{Binding HighlightCurrentLayerViewCommand}"
+                Header="Highlight Current Layer"
+                IsCheckable="True"
+                IsChecked="{Binding HighlightCurrentLayer, Mode=TwoWay}" />
+            <Separator />
+            <MenuItem Command="{Binding ZoomInCommand}" Header="Zoom In" />
+            <MenuItem Command="{Binding ZoomOutCommand}" Header="Zoom Out" />
+            <MenuItem Command="{Binding ResetZoomCommand}" Header="Reset Zoom" />
+            <MenuItem Command="{Binding ZoomToFitCommand}" Header="Fit Level in View" />
+            <Separator />
+            <MenuItem Command="{Binding FullscreenCommand}" Header="Fullscreen" />
+            <MenuItem Command="{Binding ClearViewCommand}" Header="Clear View" />
+        </MenuItem>
+        <!--  Project menu  -->
+        <MenuItem Header="_Project">
+            <MenuItem Command="{Binding AddWorldCommand}" Header="_Add World..." />
+            <MenuItem Command="{Binding RefreshProjectCommand}" Header="Refresh Project" />
+            <Separator />
+            <MenuItem Command="{Binding EditWorldPropertiesCommand}" Header="Properties" />
+        </MenuItem>
+        <!--  Help menu  -->
+        <MenuItem Header="_Help">
+            <MenuItem Command="{Binding OpenDocumentationCommand}" Header="Documentation" />
+            <MenuItem Command="{Binding OpenAboutCommand}" Header="About" />
+        </MenuItem>
+    </Menu>
+</UserControl>

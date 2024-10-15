@@ -1,0 +1,43 @@
+﻿<Window
+    x:Class="HarvestHollow.LevelEditor.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:HarvestHollow.LevelEditor"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:monoGameControls="clr-namespace:HarvestHollow.LevelEditor.Views.MonoGameControls"
+    xmlns:userControls="clr-namespace:HarvestHollow.LevelEditor.Views.CustomControls"
+    xmlns:vm="clr-namespace:HarvestHollow.LevelEditor.ViewModels"
+    Title="HarvestHollow.LevelEditor"
+    Width="800"
+    Height="480"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <DockPanel LastChildFill="True">
+        <userControls:MenuControl DataContext="{Binding MenuViewModel}" DockPanel.Dock="Top" />
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <monoGameControls:MonoGameContentControl Grid.Column="0">
+                <monoGameControls:MonoGameContentControl.DataContext>
+                    <vm:MainWindowViewModel />
+                </monoGameControls:MonoGameContentControl.DataContext>
+            </monoGameControls:MonoGameContentControl>
+
+            <monoGameControls:MonoGameContentControl Grid.Column="1">
+                <monoGameControls:MonoGameContentControl.DataContext>
+                    <vm:MainWindowViewModel />
+                </monoGameControls:MonoGameContentControl.DataContext>
+            </monoGameControls:MonoGameContentControl>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -3,6 +3,7 @@
   "name": "LevelSchema",
   "type": "record",
   "doc": "Defines a level in Harvest Hollow.",
+  "aliases": [ "LevelStruct" ],
   "fields": [
     {
       "name": "identifier",
