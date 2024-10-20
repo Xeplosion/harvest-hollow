@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using System.Windows.Markup;
 
 [assembly: System.Windows.ThemeInfo(System.Windows.ResourceDictionaryLocation.None, System.Windows.ResourceDictionaryLocation.SourceAssembly)]
 
@@ -17,3 +18,4 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM.
 
 [assembly: Guid("a49a0da3-e5e9-46b9-9ee7-131e1c9cce3e")]
+[assembly: XmlnsDefinition("http://schemas.microsoft.com/winfx/2006/xaml/presentation", "SplitPanel.WPF.Controls")]

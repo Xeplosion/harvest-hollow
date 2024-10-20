@@ -6,11 +6,14 @@
     xmlns:local="clr-namespace:HarvestHollow.LevelEditor"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:monoGameControls="clr-namespace:HarvestHollow.LevelEditor.Views.MonoGameControls"
+    xmlns:splitPanelControls="clr-namespace:HarvestHollow.LevelEditor.Views.SplitPanelControls"
     xmlns:userControls="clr-namespace:HarvestHollow.LevelEditor.Views.CustomControls"
     xmlns:vm="clr-namespace:HarvestHollow.LevelEditor.ViewModels"
     Title="HarvestHollow.LevelEditor"
     Width="800"
     Height="480"
+    Background="#0d1117"
+    PreviewKeyDown="window_KeyDown"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
@@ -20,24 +23,84 @@
 
     <DockPanel LastChildFill="True">
         <userControls:MenuControl DataContext="{Binding MenuViewModel}" DockPanel.Dock="Top" />
+        <splitPanelControls:SplitPanel
+            x:Name="panel1"
+            Grid.Row="2"
+            Margin="2"
+            Background="#141414"
+            MinChildSize="25"
+            Orientation="Vertical">
+            <Border
+                splitPanelControls:SplitPanel.Size="1"
+                Background="#141414"
+                BorderBrush="#292929"
+                BorderThickness="1" />
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+            <splitPanelControls:SplitPanel
+                x:Name="panel2"
+                Margin="5"
+                Background="#141414"
+                MinChildSize="25"
+                Orientation="Vertical">
+                <splitPanelControls:SplitPanel
+                    x:Name="panel3"
+                    Background="#141414"
+                    MinChildSize="25">
+                    <Border
+                        Background="#141414"
+                        BorderBrush="#292929"
+                        BorderThickness="1" />
 
-            <monoGameControls:MonoGameContentControl Grid.Column="0">
-                <monoGameControls:MonoGameContentControl.DataContext>
-                    <vm:MainWindowViewModel />
-                </monoGameControls:MonoGameContentControl.DataContext>
-            </monoGameControls:MonoGameContentControl>
+                    <splitPanelControls:SplitPanel
+                        x:Name="panel4"
+                        Background="#141414"
+                        MinChildSize="25"
+                        Orientation="Vertical">
+                        <Border
+                            Background="#141414"
+                            BorderBrush="#292929"
+                            BorderThickness="1" />
+                        <Border
+                            Background="#141414"
+                            BorderBrush="#343434"
+                            BorderThickness="1" />
+                        <Border
+                            Background="#141414"
+                            BorderBrush="#292929"
+                            BorderThickness="1" />
+                    </splitPanelControls:SplitPanel>
 
-            <monoGameControls:MonoGameContentControl Grid.Column="1">
-                <monoGameControls:MonoGameContentControl.DataContext>
-                    <vm:MainWindowViewModel />
-                </monoGameControls:MonoGameContentControl.DataContext>
-            </monoGameControls:MonoGameContentControl>
-        </Grid>
+                    <splitPanelControls:SplitPanel
+                        x:Name="panel5"
+                        Background="#141414"
+                        MinChildSize="25"
+                        Orientation="Vertical">
+                        <Border
+                            Background="#141414"
+                            BorderBrush="#292929"
+                            BorderThickness="1" />
+                        <Border
+                            Background="#141414"
+                            BorderBrush="#292929"
+                            BorderThickness="1" />
+                    </splitPanelControls:SplitPanel>
+                </splitPanelControls:SplitPanel>
+
+                <splitPanelControls:SplitPanel
+                    x:Name="panel6"
+                    Background="#141414"
+                    MinChildSize="25"
+                    Orientation="Horizontal">
+                    <Border
+                        Background="#141414"
+                        BorderBrush="#292929"
+                        BorderThickness="1" />
+                    <Border
+                        Background="#141414"
+                        BorderBrush="#292929"
+                        BorderThickness="1" />
+                </splitPanelControls:SplitPanel>
+            </splitPanelControls:SplitPanel>
+        </splitPanelControls:SplitPanel>
     </DockPanel>
 </Window>

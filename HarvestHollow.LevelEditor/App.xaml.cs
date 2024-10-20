@@ -11,9 +11,12 @@ public partial class App : Application
     {
         base.OnStartup(e);
         MainWindow mainWindow = new();
+        mainWindow.WindowStyle = WindowStyle.ThreeDBorderWindow;
+        mainWindow.WindowState = WindowState.Normal;
+        mainWindow.ResizeMode = ResizeMode.CanResize;
         mainWindow.Show();
     }
-    private static void s_appDispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+    private static void s_appDispatcher_UnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
     {
         // Log the exception and show a message to the user
         MessageBox.Show("An error occurred: " + e.Exception.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);

@@ -4,6 +4,7 @@ using System.Windows;
 using System.Windows.Input;
 using HarvestHollow.LevelEditor.Utilities;
 using HarvestHollow.LevelEditor.ViewModels.MenuCommands;
+using HarvestHollow.LevelEditor.Views;
 
 namespace HarvestHollow.LevelEditor.ViewModels;
 
@@ -58,6 +59,13 @@ public class MenuControlViewModel : ViewModel
     public bool EnableTileAnimations { get; set; }
     public bool EnableTileCollisions { get; set; }
     public bool HighlightCurrentLayer { get; set; }
+    public bool IsFullscreen
+    {
+        get => MainWindow.s_IsFullscreen;
+        set => MainWindow.s_IsFullscreen = value;
+    }
+    public static bool s_MenuIsFullscreen { get; set; }
+
     public ICommand EnableProjectViewVisibleCommand { get; }
     public ICommand EnableWorldViewVisibleCommand { get; }
     public ICommand EnableLevelViewVisibleCommand { get; }
@@ -161,7 +169,7 @@ public class MenuControlViewModel : ViewModel
         ZoomOutCommand = new RelayCommand(executeZoomOut);
         ResetZoomCommand = new RelayCommand(executeResetZoom);
         ZoomToFitCommand = new RelayCommand(executeZoomToFit);
-        FullscreenCommand = new RelayCommand(executeFullscreen);
+        FullscreenCommand = new RelayCommand(() => ToggleFullScreen.s_Toggle());
         ClearViewCommand = new RelayCommand(executeClearView);
 
         // Project commands.
@@ -222,7 +230,6 @@ public class MenuControlViewModel : ViewModel
     private void executeZoomOut() { /* Implementation */ }
     private void executeResetZoom() { /* Implementation */ }
     private void executeZoomToFit() { /* Implementation */ }
-    private void executeFullscreen() { /* Implementation */ }
     private void executeClearView() { /* Implementation */ }
     private void executeAddWorld() { /* Implementation */ }
     private void executeRefreshProject() { /* Implementation */ }

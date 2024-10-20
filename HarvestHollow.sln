@@ -7,13 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarvestHollow", "HarvestHol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarvestHollow.Tests.MSTest", "HarvestHollow.Tests.MSTest\HarvestHollow.Tests.MSTest.csproj", "{2F2436D5-CA2D-49F5-8EE9-5DA15737E092}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{85541A04-E77E-4F49-9D1E-E263D5AF4430}"
-	ProjectSection(SolutionItems) = preProject
-		DevelopmentResources\BackupLevelEditor\MenuControl.axaml = DevelopmentResources\BackupLevelEditor\MenuControl.axaml
-		DevelopmentResources\BackupLevelEditor\MenuControl.axaml.cs = DevelopmentResources\BackupLevelEditor\MenuControl.axaml.cs
-		DevelopmentResources\BackupLevelEditor\MenuControlViewModel.cs = DevelopmentResources\BackupLevelEditor\MenuControlViewModel.cs
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HarvestHollow.LevelEditor", "HarvestHollow.LevelEditor\HarvestHollow.LevelEditor.csproj", "{A55D95EE-F929-45E7-BEF8-915320D2CE89}"
 EndProject
 Global

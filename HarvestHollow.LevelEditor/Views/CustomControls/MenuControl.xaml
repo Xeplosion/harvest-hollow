@@ -8,6 +8,7 @@
     xmlns:vm="clr-namespace:HarvestHollow.LevelEditor.ViewModels"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    Background="#0d1117"
     mc:Ignorable="d">
 
     <UserControl.DataContext>
@@ -150,7 +151,11 @@
             <MenuItem Command="{Binding ResetZoomCommand}" Header="Reset Zoom" />
             <MenuItem Command="{Binding ZoomToFitCommand}" Header="Fit Level in View" />
             <Separator />
-            <MenuItem Command="{Binding FullscreenCommand}" Header="Fullscreen" />
+            <MenuItem
+                Command="{Binding FullscreenCommand}"
+                Header="Fullscreen"
+                IsCheckable="True"
+                IsChecked="{Binding MenuControlFullscreen}" />
             <MenuItem Command="{Binding ClearViewCommand}" Header="Clear View" />
         </MenuItem>
         <!--  Project menu  -->

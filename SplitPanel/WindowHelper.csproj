@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADEBE16F-E301-4032-B3D0-0A801E8AA635}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>WindowHelper</RootNamespace>
+    <AssemblyName>clib</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0168</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CodeDOM\C\BooleanValue.cs" />
+    <Compile Include="CodeDOM\C\CodeAttribute.cs" />
+    <Compile Include="CodeDOM\C\CodeBlock.cs" />
+    <Compile Include="CodeDOM\C\CodeList.cs" />
+    <Compile Include="CodeDOM\C\CodeListEntry.cs" />
+    <Compile Include="CodeDOM\C\CodeObject.cs" />
+    <Compile Include="CodeDOM\C\CodeType.cs" />
+    <Compile Include="CodeDOM\C\CodeValue.cs" />
+    <Compile Include="CodeDOM\C\Comment.cs" />
+    <Compile Include="CodeDOM\C\CompoundType.cs" />
+    <Compile Include="CodeDOM\C\DefaultTypes.cs" />
+    <Compile Include="CodeDOM\C\DefaultValues.cs" />
+    <Compile Include="CodeDOM\C\Define.cs" />
+    <Compile Include="CodeDOM\C\EndIf.cs" />
+    <Compile Include="CodeDOM\C\EnumType.cs" />
+    <Compile Include="CodeDOM\C\EnumValue.cs" />
+    <Compile Include="CodeDOM\C\FalseValue.cs" />
+    <Compile Include="CodeDOM\C\Function.cs" />
+    <Compile Include="CodeDOM\C\FunctionCall.cs" />
+    <Compile Include="CodeDOM\C\FunctionReference.cs" />
+    <Compile Include="CodeDOM\C\IfDefined.cs" />
+    <Compile Include="CodeDOM\C\IfNotDefined.cs" />
+    <Compile Include="CodeDOM\C\Include.cs" />
+    <Compile Include="CodeDOM\C\LocationPragma.cs" />
+    <Compile Include="CodeDOM\C\NewlineItem.cs" />
+    <Compile Include="CodeDOM\C\NullValue.cs" />
+    <Compile Include="CodeDOM\C\Parameter.cs" />
+    <Compile Include="CodeDOM\C\PointerType.cs" />
+    <Compile Include="CodeDOM\C\Prototype.cs" />
+    <Compile Include="CodeDOM\C\RootAttribute.cs" />
+    <Compile Include="CodeDOM\C\SectionEnd.cs" />
+    <Compile Include="CodeDOM\C\SectionPragma.cs" />
+    <Compile Include="CodeDOM\C\SignedValue.cs" />
+    <Compile Include="CodeDOM\C\Statement.cs" />
+    <Compile Include="CodeDOM\C\StringValue.cs" />
+    <Compile Include="CodeDOM\C\StructField.cs" />
+    <Compile Include="CodeDOM\C\StructType.cs" />
+    <Compile Include="CodeDOM\C\TrueValue.cs" />
+    <Compile Include="CodeDOM\C\TypeCast.cs" />
+    <Compile Include="CodeDOM\C\UnionType.cs" />
+    <Compile Include="CodeDOM\C\UnsignedValue.cs" />
+    <Compile Include="CodeDOM\C\VariableDeclaration.cs" />
+    <Compile Include="CodeDOM\C\VoidType.cs" />
+    <Compile Include="CodeDOM\C\WeakAttribute.cs" />
+    <Compile Include="CodeDOM\C\WhileLoop.cs" />
+    <Compile Include="CommandLine\CommandLineStream.cs" />
+    <Compile Include="CommandLine\ExtensionLexer.cs" />
+    <Compile Include="CommandLine\Option.cs" />
+    <Compile Include="CommandLine\OptionCollection.cs" />
+    <Compile Include="CommandLine\ParseFunctionAttribute.cs" />
+    <Compile Include="CommandLine\UserOptions.cs" />
+    <Compile Include="Core\Characters.cs" />
+    <Compile Include="Core\ConfigDocument.cs" />
+    <Compile Include="Core\Endianness.cs" />
+    <Compile Include="Core\Extensions\XmlExtensions.cs" />
+    <Compile Include="Core\ITypeInitialize.cs" />
+    <Compile Include="Core\NumericValue.cs" />
+    <Compile Include="Core\Program.cs" />
+    <Compile Include="IO\Streams\AnonymousPipeStream.cs" />
+    <Compile Include="IO\Streams\CommonStream.cs" />
+    <Compile Include="IO\Streams\CharacterStream.cs" />
+    <Compile Include="IO\Streams\TokenStream.cs" />
+    <Compile Include="Core\Utilities\FileUtils.cs" />
+    <Compile Include="Native\Win32\NativeCore.cs" />
+    <Compile Include="Native\Win32\NativePipes.cs" />
+    <Compile Include="Native\Win32\NativeProcess.cs" />
+    <Compile Include="Native\Win32\NativeTcp.cs" />
+    <Compile Include="Native\Win32\NativeWindows.cs" />
+    <Compile Include="Net\TcpHelper.cs" />
+    <Compile Include="Net\TcpRecord.cs" />
+    <Compile Include="WPF\Controls\SplitPanel\SplitPanel.ElementCollection.cs" />
+    <Compile Include="WPF\Controls\SplitPanel\SplitPanel.cs" />
+    <Compile Include="WPF\Controls\SplitPanel\SplitPanel.Splitter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=1.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\SplitterStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
